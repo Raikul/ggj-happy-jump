@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dy4ma3ffjk0u8"]
 
-[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://piso.tscn" id="1_6mlhc"]
+[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_6mlhc"]
 [ext_resource type="Script" path="res://scripts/game_area.gd" id="1_l166w"]
 [ext_resource type="PackedScene" uid="uid://bxr1nkdctxx3s" path="res://enemigo.tscn" id="2_687ro"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_ij0qs"]

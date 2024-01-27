@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://ttnwqea40uil"]
+[gd_scene load_steps=2 format=3 uid="uid://bxip7qe2gnh8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
 size = Vector2(858, 89)
@@ -18,6 +18,4 @@ offset_left = -7.0
 offset_top = -11.0
 offset_right = 856.0
 offset_bottom = 80.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 color = Color(0.462745, 0.0156863, 0.309804, 1)

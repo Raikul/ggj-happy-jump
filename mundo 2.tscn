@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy4ma3ffjk0u8"]
+[gd_scene load_steps=4 format=3 uid="uid://cytokjj84y7io"]
 
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="1_e0dg1"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="2_dck6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
+size = Vector2(858, 89)
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,7 +29,20 @@ position = Vector2(3268, 102)
 [node name="RigidBody2D7" parent="." instance=ExtResource("2_dck6a")]
 position = Vector2(4130, 102)
 
-[node name="RigidBody2D8" parent="." instance=ExtResource("2_dck6a")]
+[node name="RigidBody2D8" type="RigidBody2D" parent="."]
 position = Vector2(1514, 100)
 rotation = -1.57155
-scale = Vector2(0.304414, 4.17994)
+disable_mode = 1
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D8"]
+modulate = Color(0.133333, 0, 0.0588235, 1)
+position = Vector2(284.188, 48.8029)
+shape = SubResource("RectangleShape2D_hfsxh")
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D8"]
+offset_left = -7.0
+offset_top = 19.0
+offset_right = 620.0
+offset_bottom = 80.0
+color = Color(0.462745, 0.0156863, 0.309804, 1)
