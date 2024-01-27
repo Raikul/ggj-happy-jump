@@ -1,42 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy4ma3ffjk0u8"]
+[gd_scene load_steps=3 format=3 uid="uid://dy4ma3ffjk0u8"]
 
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_jv378"]
-[ext_resource type="Texture2D" uid="uid://dahx2kyx7wj2l" path="res://icon.svg" id="2_sdmyi"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
-size = Vector2(858, 89)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtx7"]
-size = Vector2(109, 122)
+[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://piso.tscn" id="1_6mlhc"]
+[ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_ij0qs"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(7, 569)
-disable_mode = 1
-gravity_scale = 0.0
+[node name="RigidBody2D" parent="." instance=ExtResource("1_6mlhc")]
+position = Vector2(733, 912)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-modulate = Color(0.133333, 0, 0.0588235, 1)
-position = Vector2(426, 32.5)
-shape = SubResource("RectangleShape2D_hfsxh")
+[node name="RigidBody2D3" parent="." instance=ExtResource("1_6mlhc")]
+position = Vector2(1530, 915)
 
-[node name="ColorRect" type="ColorRect" parent="RigidBody2D"]
-offset_left = -7.0
-offset_top = -11.0
-offset_right = 856.0
-offset_bottom = 80.0
-color = Color(0.462745, 0.0156863, 0.309804, 1)
+[node name="RigidBody2D4" parent="." instance=ExtResource("1_6mlhc")]
+position = Vector2(2368, 710)
+rotation = -0.634548
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(429, 263)
-script = ExtResource("1_jv378")
+[node name="RigidBody2D2" parent="." instance=ExtResource("1_6mlhc")]
+position = Vector2(118, 343)
+rotation = 0.763478
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(38.5, -1)
-shape = SubResource("RectangleShape2D_qmtx7")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(41, 2)
-texture = ExtResource("2_sdmyi")
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_ij0qs")]
