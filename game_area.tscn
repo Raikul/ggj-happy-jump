@@ -10,19 +10,55 @@ script = ExtResource("1_l166w")
 
 [node name="Enemy" parent="." instance=ExtResource("2_687ro")]
 
-[node name="RigidBody2D" parent="." instance=ExtResource("1_6mlhc")]
-position = Vector2(733, 912)
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_ij0qs")]
+position = Vector2(-326, -322)
 
-[node name="RigidBody2D3" parent="." instance=ExtResource("1_6mlhc")]
-position = Vector2(1530, 915)
+[node name="Plataformas" type="Node" parent="."]
 
-[node name="RigidBody2D4" parent="." instance=ExtResource("1_6mlhc")]
-position = Vector2(2368, 710)
-rotation = -0.634548
+[node name="RigidBody2D" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(735, 915)
 
-[node name="RigidBody2D2" parent="." instance=ExtResource("1_6mlhc")]
-position = Vector2(118, 343)
+[node name="RigidBody2D3" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(1598, 915)
+
+[node name="RigidBody2D4" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(2461, 915)
+
+[node name="RigidBody2D5" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(3324, 915)
+
+[node name="RigidBody2D7" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(3479, 486)
+
+[node name="RigidBody2D8" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(4186, 915)
+
+[node name="RigidBody2D9" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(5049, 915)
+
+[node name="RigidBody2D12" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(5790, 540)
+
+[node name="RigidBody2D13" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(7608, 786)
+
+[node name="RigidBody2D14" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(5771, 1230)
+scale = Vector2(2.06872, 1.34546)
+
+[node name="RigidBody2D11" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(6985, 116)
+
+[node name="RigidBody2D15" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(8232, -270)
+
+[node name="RigidBody2D10" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(5912, 915)
+
+[node name="RigidBody2D2" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(102, 320)
 rotation = 0.763478
 
-[node name="Personaje" parent="." instance=ExtResource("2_ij0qs")]
-position = Vector2(574, 414)
+[node name="RigidBody2D6" parent="Plataformas" instance=ExtResource("1_6mlhc")]
+position = Vector2(-521, -276)
+rotation = 0.763478
