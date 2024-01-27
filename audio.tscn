@@ -1,11 +1,21 @@
-[gd_scene format=3 uid="uid://d3sc0pk07eei0"]
+[gd_scene load_steps=5 format=3 uid="uid://d3sc0pk07eei0"]
+
+[ext_resource type="AudioStream" uid="uid://dljd5j8lbmp4o" path="res://assets/Happy_jump_musica_nivel.ogg" id="1_dxfve"]
+[ext_resource type="AudioStream" uid="uid://dq87o7o5l28yp" path="res://assets/Esqueleto_se_arma.ogg" id="2_msea6"]
+[ext_resource type="AudioStream" uid="uid://bprwgm438ciwn" path="res://assets/Esqueleto_se_desarma.ogg" id="3_8mmlj"]
+[ext_resource type="AudioStream" uid="uid://cj4dty0kfukyx" path="res://assets/Finalizacion_nivel.ogg" id="4_ogdvm"]
 
 [node name="AudioStreamPlayer" type="Node"]
 
 [node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_dxfve")
+autoplay = true
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+[node name="EsqueletoArma" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_msea6")
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+[node name="EsqueletoDesarma" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8mmlj")
 
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+[node name="FinDeNivel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ogdvm")

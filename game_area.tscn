@@ -9,8 +9,9 @@
 script = ExtResource("1_l166w")
 
 [node name="Enemy" parent="." instance=ExtResource("2_687ro")]
+position = Vector2(678, -332)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_ij0qs")]
+[node name="Player" parent="." instance=ExtResource("2_ij0qs")]
 position = Vector2(-326, -322)
 
 [node name="Plataformas" type="Node" parent="."]
