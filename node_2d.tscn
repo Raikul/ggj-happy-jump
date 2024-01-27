@@ -11,25 +11,25 @@
 position = Vector2(735, 915)
 
 [node name="RigidBody2D3" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(1598, 915)
+position = Vector2(1599, 915)
 
 [node name="RigidBody2D4" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(2461, 915)
+position = Vector2(2463, 915)
 
 [node name="RigidBody2D5" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(3324, 915)
+position = Vector2(3327, 915)
 
 [node name="RigidBody2D7" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(3479, 486)
+position = Vector2(3481, 543)
 
 [node name="RigidBody2D8" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(4186, 915)
+position = Vector2(4191, 915)
 
 [node name="RigidBody2D9" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(5049, 915)
+position = Vector2(5055, 915)
 
 [node name="RigidBody2D12" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(5969, 522)
+position = Vector2(5970, 544)
 
 [node name="RigidBody2D13" parent="Plataformas" instance=ExtResource("1_svr6v")]
 position = Vector2(7487, 914)
@@ -41,7 +41,7 @@ position = Vector2(7013, 163)
 position = Vector2(8066, -186)
 
 [node name="RigidBody2D10" parent="Plataformas" instance=ExtResource("1_svr6v")]
-position = Vector2(5912, 915)
+position = Vector2(5919, 915)
 
 [node name="RigidBody2D2" parent="Plataformas" instance=ExtResource("1_svr6v")]
 position = Vector2(102, 320)
@@ -52,7 +52,7 @@ position = Vector2(-521, -276)
 rotation = 0.763478
 
 [node name="RigidBody2D15" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(8351, 913)
+position = Vector2(8351, 914)
 
 [node name="RigidBody2D15" parent="RigidBody2D15" instance=ExtResource("1_svr6v")]
 position = Vector2(864, 0)
@@ -64,46 +64,46 @@ position = Vector2(9194, -536)
 position = Vector2(9123, 205)
 
 [node name="RigidBody2D18" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(10828, 893)
+position = Vector2(10828, 914)
 
 [node name="RigidBody2D19" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(11692, 893)
+position = Vector2(11692, 914)
 
 [node name="RigidBody2D20" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(12556, 893)
+position = Vector2(12556, 914)
 
 [node name="RigidBody2D21" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(13935, 884)
+position = Vector2(13934, 914)
 
 [node name="RigidBody2D22" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(14799, 883)
+position = Vector2(14798, 914)
 
 [node name="RigidBody2D23" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(15663, 883)
+position = Vector2(15662, 914)
 
 [node name="RigidBody2D24" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(17681, 871)
+position = Vector2(17679, 914)
 
 [node name="RigidBody2D25" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(12082, 165)
+position = Vector2(12062, 543)
 
 [node name="RigidBody2D26" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(13237, -320)
+position = Vector2(13237, 279)
 
 [node name="RigidBody2D27" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(14535, 179)
+position = Vector2(14506, 541)
 
 [node name="RigidBody2D28" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(15848, -355)
+position = Vector2(15464, 254)
 
 [node name="RigidBody2D29" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(17098, -859)
+position = Vector2(16533, 18)
 
 [node name="RigidBody2D30" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(18548, 871)
+position = Vector2(18543, 914)
 
 [node name="RigidBody2D31" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(19414, 870)
+position = Vector2(19407, 914)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_eidd4")]
 position = Vector2(-326, -322)
