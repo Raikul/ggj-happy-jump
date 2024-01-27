@@ -43,7 +43,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 60
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_bottom = 60
 
 [node name="Label" type="Label" parent="Node2D/Container/MarginContainer"]
 layout_mode = 2
