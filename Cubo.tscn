@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://k6exw152hxvk"]
+[gd_scene load_steps=2 format=3 uid="uid://dgvb135hkaoq0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88c8o"]
 size = Vector2(48, 42)
@@ -6,15 +6,17 @@ size = Vector2(48, 42)
 [node name="Node2D" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(10, 792)
+position = Vector2(14, 14)
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(16, 23)
+position = Vector2(12, 9)
 shape = SubResource("RectangleShape2D_88c8o")
 
 [node name="ColorRect" type="ColorRect" parent="RigidBody2D"]
-offset_left = -10.0
-offset_right = 42.0
-offset_bottom = 46.0
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 38.0
+offset_bottom = 32.0
 color = Color(0.215686, 0, 0.690196, 1)
+metadata/_edit_use_anchors_ = true

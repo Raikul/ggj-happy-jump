@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxip7qe2gnh8g"]
+[gd_scene load_steps=2 format=3 uid="uid://04oe57obar65"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
-size = Vector2(858, 89)
+size = Vector2(856, 89)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 position = Vector2(7, 569)

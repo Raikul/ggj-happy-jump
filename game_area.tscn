@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+[gd_scene load_steps=5 format=3 uid="uid://bi01gf8slb3jh"]
+
+[ext_resource type="PackedScene" path="res://piso.tscn" id="1_6mlhc"]
+=======
 [gd_scene load_steps=5 format=3 uid="uid://dy4ma3ffjk0u8"]
 
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_6mlhc"]
+>>>>>>> 0dee0838141597dd336941486dce51d61be8fee1
 [ext_resource type="Script" path="res://scripts/game_area.gd" id="1_l166w"]
 [ext_resource type="PackedScene" uid="uid://bxr1nkdctxx3s" path="res://enemigo.tscn" id="2_687ro"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_ij0qs"]
@@ -9,9 +15,14 @@
 script = ExtResource("1_l166w")
 
 [node name="Enemy" parent="." instance=ExtResource("2_687ro")]
+<<<<<<< HEAD
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_ij0qs")]
+=======
 position = Vector2(678, -332)
 
 [node name="Player" parent="." instance=ExtResource("2_ij0qs")]
+>>>>>>> 0dee0838141597dd336941486dce51d61be8fee1
 position = Vector2(-326, -322)
 
 [node name="Plataformas" type="Node" parent="."]
