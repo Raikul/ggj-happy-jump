@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbdc76u3opnmb"]
 
-[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://piso.tscn" id="1_svr6v"]
+[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_svr6v"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_eidd4"]
 
 [node name="Node2D" type="Node2D"]
