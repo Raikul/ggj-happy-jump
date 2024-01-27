@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d3sc0pk07eei0"]
+
+[node name="AudioStreamPlayer" type="Node"]
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
