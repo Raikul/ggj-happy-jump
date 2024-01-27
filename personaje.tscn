@@ -21,3 +21,6 @@ shape = SubResource("RectangleShape2D_qmtx7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
+
+[node name="RespawnTimer" type="Timer" parent="."]
+wait_time = 3.0

@@ -9,9 +9,11 @@ const CRASH_VELOCITY = 1200
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var crashing = false
+@onready var respawn_timer = $RespawnTimer
 
 func _ready():
 	add_to_group("Player")
+	respawn_timer.connect("timeout", respawn)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -43,11 +45,17 @@ func _physics_process(delta):
 			crash()
 		if last_collision.get_collider().is_in_group("Enemy"): die()
 
-		#print(last_collision.get_collider_velocity())
-
 func die():
 	modulate = Color.GREEN_YELLOW
-	
+	timed_respawn(3)
 
 func crash():
 	modulate = Color.RED
+	timed_respawn(3)
+
+func timed_respawn(time):
+	respawn_timer.start(time)
+
+	
+func respawn():
+	modulate = Color.WHITE
