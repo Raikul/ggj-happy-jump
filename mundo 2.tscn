@@ -1,48 +1,67 @@
-[gd_scene load_steps=4 format=3 uid="uid://cytokjj84y7io"]
+[gd_scene load_steps=5 format=3 uid="uid://dy4ma3ffjk0u8"]
 
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="1_e0dg1"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="2_dck6a"]
+[ext_resource type="PackedScene" uid="uid://k6exw152hxvk" path="res://Cubo.tscn" id="2_we8u1"]
+[ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="4_jf7oh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
 size = Vector2(858, 89)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(0, 1)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_e0dg1")]
 position = Vector2(-38, 22)
 
-[node name="RigidBody2D" parent="." instance=ExtResource("2_dck6a")]
-position = Vector2(-184, 102)
+[node name="Cuadraditos" type="Node" parent="."]
 
-[node name="RigidBody2D3" parent="." instance=ExtResource("2_dck6a")]
-position = Vector2(679, 102)
+[node name="Node2D2" parent="Cuadraditos" instance=ExtResource("2_we8u1")]
+position = Vector2(1744, -732)
 
-[node name="RigidBody2D4" parent="." instance=ExtResource("2_dck6a")]
-position = Vector2(1542, 102)
+[node name="Node2D7" parent="Cuadraditos/Node2D2" instance=ExtResource("2_we8u1")]
+position = Vector2(-52, 0)
 
-[node name="RigidBody2D5" parent="." instance=ExtResource("2_dck6a")]
-position = Vector2(2405, 102)
+[node name="Node2D5" parent="Cuadraditos/Node2D2" instance=ExtResource("2_we8u1")]
+position = Vector2(-52, -138)
 
-[node name="RigidBody2D6" parent="." instance=ExtResource("2_dck6a")]
-position = Vector2(3268, 102)
+[node name="Node2D6" parent="Cuadraditos/Node2D2" instance=ExtResource("2_we8u1")]
+position = Vector2(0, -138)
 
-[node name="RigidBody2D7" parent="." instance=ExtResource("2_dck6a")]
-position = Vector2(4130, 102)
+[node name="Node2D" parent="Cuadraditos/Node2D2" instance=ExtResource("2_we8u1")]
+position = Vector2(-52, -46)
 
-[node name="RigidBody2D8" type="RigidBody2D" parent="."]
-position = Vector2(1514, 100)
-rotation = -1.57155
-disable_mode = 1
-gravity_scale = 0.0
+[node name="Node2D2" parent="Cuadraditos/Node2D2" instance=ExtResource("2_we8u1")]
+position = Vector2(0, -46)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D8"]
-modulate = Color(0.133333, 0, 0.0588235, 1)
-position = Vector2(284.188, 48.8029)
-shape = SubResource("RectangleShape2D_hfsxh")
+[node name="Node2D3" parent="Cuadraditos/Node2D2" instance=ExtResource("2_we8u1")]
+position = Vector2(-52, -92)
 
-[node name="ColorRect" type="ColorRect" parent="RigidBody2D8"]
-offset_left = -7.0
-offset_top = 19.0
-offset_right = 620.0
-offset_bottom = 80.0
-color = Color(0.462745, 0.0156863, 0.309804, 1)
+[node name="Node2D4" parent="Cuadraditos/Node2D2" instance=ExtResource("2_we8u1")]
+position = Vector2(0, -92)
+
+[node name="Pisos" type="Node" parent="."]
+
+[node name="RigidBody2D" parent="Pisos" instance=ExtResource("2_dck6a")]
+position = Vector2(-184, 103)
+mass = 1000.0
+
+[node name="RigidBody2D3" parent="Pisos" instance=ExtResource("2_dck6a")]
+position = Vector2(679, 103)
+
+[node name="RigidBody2D4" parent="Pisos" instance=ExtResource("2_dck6a")]
+position = Vector2(1542, 103)
+
+[node name="RigidBody2D5" parent="Pisos" instance=ExtResource("2_dck6a")]
+position = Vector2(2405, 103)
+
+[node name="RigidBody2D6" parent="Pisos" instance=ExtResource("2_dck6a")]
+position = Vector2(3268, 103)
+
+[node name="RigidBody2D7" parent="Pisos" instance=ExtResource("2_dck6a")]
+position = Vector2(4130, 103)
+
+[node name="Paredes" type="Node" parent="."]
+
+[node name="pared" parent="Paredes" instance=ExtResource("4_jf7oh")]
+position = Vector2(-316, -523)
