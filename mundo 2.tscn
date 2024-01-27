@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://k6exw152hxvk" path="res://Cubo.tscn" id="2_we8u1"]
 [ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="4_jf7oh"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
+size = Vector2(858, 89)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, 1)
 

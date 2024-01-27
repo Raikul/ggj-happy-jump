@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxr1nkdctxx3s"]
+[gd_scene load_steps=8 format=3 uid="uid://bxr1nkdctxx3s"]
 
 [ext_resource type="Script" path="res://scripts/enemigo.gd" id="1_kge4k"]
 [ext_resource type="Texture2D" uid="uid://dahx2kyx7wj2l" path="res://icon.svg" id="2_gaxp6"]
+[ext_resource type="Texture2D" uid="uid://cdm85ycb5njpg" path="res://assets/dialogo_fantasma.png" id="3_s1tmx"]
+[ext_resource type="Script" path="res://scripts/dialogue.gd" id="3_u1wm3"]
+[ext_resource type="FontFile" uid="uid://fie1gmhfqijk" path="res://assets/LosmentHunter-1G1ve.ttf" id="4_jita8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtx7"]
 size = Vector2(126, 127)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a4tbn"]
 
 [node name="Enemy" type="CharacterBody2D"]
 position = Vector2(429, 263)
@@ -19,3 +24,34 @@ texture = ExtResource("2_gaxp6")
 modulate = Color(1, 1, 0, 1)
 position = Vector2(41, 1.5)
 shape = SubResource("RectangleShape2D_qmtx7")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Container" type="PanelContainer" parent="Node2D"]
+offset_left = 144.0
+offset_top = -481.0
+offset_right = 656.0
+offset_bottom = 31.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a4tbn")
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/Container"]
+layout_mode = 2
+texture = ExtResource("3_s1tmx")
+
+[node name="MarginContainer" type="MarginContainer" parent="Node2D/Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 40
+
+[node name="Label" type="Label" parent="Node2D/Container/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_jita8")
+theme_override_font_sizes/font_size = 66
+text = "Devolve la guita"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_u1wm3")
+metadata/_edit_use_anchors_ = true

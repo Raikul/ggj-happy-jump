@@ -8,7 +8,6 @@ const SPEED = 180.0
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player_node
 
-
 func _ready():
 	add_to_group("Enemy")
 	pass

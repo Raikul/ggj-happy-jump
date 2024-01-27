@@ -15,6 +15,11 @@ run/main_scene="res://mundo 2.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Audio="*res://audio.tscn"
+GlobalControls="*res://global_controls.gd"
+
 [display]
 
 window/size/viewport_width=1900

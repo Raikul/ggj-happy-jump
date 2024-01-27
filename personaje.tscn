@@ -1,26 +1,129 @@
-[gd_scene load_steps=4 format=3 uid="uid://dck3uk6nmem87"]
+[gd_scene load_steps=21 format=3 uid="uid://dck3uk6nmem87"]
 
 [ext_resource type="Script" path="res://scripts/personaje.gd" id="1_jy5jl"]
 [ext_resource type="Texture2D" uid="uid://dahx2kyx7wj2l" path="res://icon.svg" id="2_agb3i"]
+[ext_resource type="Texture2D" uid="uid://cs2brf6r5xjlm" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-00.png" id="3_642kx"]
+[ext_resource type="Texture2D" uid="uid://f1egvt7uc03m" path="res://assets/Skeleton_Walk/Skeleton-Walk-00.png" id="3_nuynv"]
+[ext_resource type="Texture2D" uid="uid://domutnjkwk23j" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-01.png" id="4_myv5d"]
+[ext_resource type="Texture2D" uid="uid://c82gg6gpa7eii" path="res://assets/Skeleton_Walk/Skeleton-Walk-01.png" id="4_o4yyu"]
+[ext_resource type="Texture2D" uid="uid://fk0igt5sgmyh" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-02.png" id="5_faynw"]
+[ext_resource type="Texture2D" uid="uid://d1i6uv31nk5ob" path="res://assets/Skeleton_Walk/Skeleton-Walk-02.png" id="5_kdguv"]
+[ext_resource type="Texture2D" uid="uid://cn0t5dyg6fu26" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-03.png" id="6_56s68"]
+[ext_resource type="Texture2D" uid="uid://cw6s23lt2l22q" path="res://assets/Skeleton_Walk/Skeleton-Walk-03.png" id="6_r3iwk"]
+[ext_resource type="Texture2D" uid="uid://dk35uu3qmo7g8" path="res://assets/Skeleton_Walk/Skeleton-Walk-04.png" id="7_guxwd"]
+[ext_resource type="Texture2D" uid="uid://cw45s0iiyqpt8" path="res://assets/Skeleton_Walk/Skeleton-Walk-05.png" id="8_yfcl5"]
+[ext_resource type="Texture2D" uid="uid://dsxs5j7fr2rfj" path="res://assets/Skeleton_Walk/Skeleton-Walk-06.png" id="9_lfq2h"]
+[ext_resource type="Script" path="res://state_machine.gd" id="10_xchf0"]
+[ext_resource type="Script" path="res://Jump.gd" id="11_byd1s"]
+[ext_resource type="Script" path="res://idle_jumping_state.gd" id="11_kb7h2"]
+[ext_resource type="Script" path="res://idle_walk_state.gd" id="11_kj1bn"]
+[ext_resource type="Script" path="res://walking_state.gd" id="11_kpxvq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtx7"]
-size = Vector2(125, 127)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1mhq7"]
+radius = 159.0
+height = 318.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1klf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_642kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_myv5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_faynw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_56s68")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kdguv")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nuynv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o4yyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kdguv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r3iwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_guxwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yfcl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lfq2h")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(429, 263)
+floor_stop_on_slope = false
+floor_max_angle = 0.261799
 script = ExtResource("1_jy5jl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(41, 2)
 texture = ExtResource("2_agb3i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(41.5, 1.5)
-shape = SubResource("RectangleShape2D_qmtx7")
+position = Vector2(16, -34)
+shape = SubResource("CapsuleShape2D_1mhq7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
 
 [node name="RespawnTimer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="SkeletonAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(20, -28)
+scale = Vector2(0.597656, 0.597656)
+sprite_frames = SubResource("SpriteFrames_1klf7")
+animation = &"jump"
+frame_progress = 0.102736
+
+[node name="PlayerMachine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
+script = ExtResource("10_xchf0")
+current_state = NodePath("IdleWalkState")
+
+[node name="JumpingState" type="Node" parent="PlayerMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("11_byd1s")
+actor = NodePath("../..")
+
+[node name="WalkingState" type="Node" parent="PlayerMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("11_kpxvq")
+actor = NodePath("../..")
+
+[node name="IdleWalkState" type="Node" parent="PlayerMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("11_kj1bn")
+actor = NodePath("../..")
+
+[node name="JumpMachine" type="Node" parent="."]
+
+[node name="IdleJumpingState" type="Node" parent="JumpMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("11_kb7h2")
+actor = NodePath("../..")
