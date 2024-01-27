@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy4ma3ffjk0u8"]
+[gd_scene load_steps=5 format=3 uid="uid://dy4ma3ffjk0u8"]
 
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://piso.tscn" id="1_6mlhc"]
+[ext_resource type="Script" path="res://game_area.gd" id="1_l166w"]
+[ext_resource type="PackedScene" uid="uid://bxr1nkdctxx3s" path="res://enemigo.tscn" id="2_687ro"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_ij0qs"]
 
-[node name="Node2D" type="Node2D"]
+[node name="GameArea" type="Node2D"]
+script = ExtResource("1_l166w")
+
+[node name="Enemy" parent="." instance=ExtResource("2_687ro")]
 
 [node name="RigidBody2D" parent="." instance=ExtResource("1_6mlhc")]
 position = Vector2(733, 912)
@@ -19,4 +24,5 @@ rotation = -0.634548
 position = Vector2(118, 343)
 rotation = 0.763478
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_ij0qs")]
+[node name="Personaje" parent="." instance=ExtResource("2_ij0qs")]
+position = Vector2(574, 414)
