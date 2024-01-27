@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy4ma3ffjk0u8"]
+[gd_scene load_steps=5 format=3 uid="uid://cytokjj84y7io"]
 
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="1_e0dg1"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="2_dck6a"]
-[ext_resource type="PackedScene" uid="uid://k6exw152hxvk" path="res://Cubo.tscn" id="2_we8u1"]
-[ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="4_jf7oh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
-size = Vector2(858, 89)
+[ext_resource type="PackedScene" path="res://Cubo.tscn" id="2_we8u1"]
+[ext_resource type="PackedScene" path="res://pared.tscn" id="4_jf7oh"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, 1)

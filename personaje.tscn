@@ -20,8 +20,8 @@
 [ext_resource type="Script" path="res://walking_state.gd" id="11_kpxvq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1mhq7"]
-radius = 159.0
-height = 318.0
+radius = 115.0
+height = 302.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1klf7"]
 animations = [{
@@ -104,7 +104,7 @@ position = Vector2(20, -28)
 scale = Vector2(0.597656, 0.597656)
 sprite_frames = SubResource("SpriteFrames_1klf7")
 animation = &"jump"
-frame_progress = 0.102736
+frame_progress = 0.128795
 
 [node name="PlayerMachine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
 script = ExtResource("10_xchf0")
