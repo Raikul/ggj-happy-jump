@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://piso.tscn" id="1_svr6v"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_eidd4"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Mundo 1" type="Node2D"]
 
 [node name="Plataformas" type="Node" parent="."]
 
@@ -42,6 +42,7 @@ position = Vector2(8066, -186)
 
 [node name="RigidBody2D10" parent="Plataformas" instance=ExtResource("1_svr6v")]
 position = Vector2(5919, 915)
+gravity_scale = 1.0
 
 [node name="RigidBody2D2" parent="Plataformas" instance=ExtResource("1_svr6v")]
 position = Vector2(102, 320)
@@ -58,10 +59,10 @@ position = Vector2(8351, 914)
 position = Vector2(864, 0)
 
 [node name="RigidBody2D16" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(9194, -536)
+position = Vector2(9194, -593)
 
 [node name="RigidBody2D17" parent="." instance=ExtResource("1_svr6v")]
-position = Vector2(9123, 205)
+position = Vector2(9181, -184)
 
 [node name="RigidBody2D18" parent="." instance=ExtResource("1_svr6v")]
 position = Vector2(10828, 914)

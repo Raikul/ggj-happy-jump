@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxjpebd15x6jf"]
+
+[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://piso.tscn" id="1_6ade3"]
+[ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_onw2a"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Plataformas" type="Node" parent="."]
+
+[node name="RigidBody2D20" parent="Plataformas" instance=ExtResource("1_6ade3")]
+position = Vector2(-680, 137)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_onw2a")]
+position = Vector2(-326, -322)
+
+[node name="RigidBody2D20" parent="." instance=ExtResource("1_6ade3")]
+position = Vector2(718, 132)
+
+[node name="RigidBody2D21" parent="." instance=ExtResource("1_6ade3")]
+position = Vector2(2174, 377)
+
+[node name="RigidBody2D22" parent="." instance=ExtResource("1_6ade3")]
+position = Vector2(3557, 118)
+
+[node name="RigidBody2D23" parent="." instance=ExtResource("1_6ade3")]
+position = Vector2(4536, 111)
