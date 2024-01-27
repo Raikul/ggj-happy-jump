@@ -1,26 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxjpebd15x6jf"]
+[gd_scene load_steps=4 format=3 uid="uid://dxjpebd15x6jf"]
 
-[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://piso.tscn" id="1_6ade3"]
+[ext_resource type="PackedScene" path="res://piso.tscn" id="1_6ade3"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_onw2a"]
+[ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="3_53lg5"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Plataformas" type="Node" parent="."]
 
 [node name="RigidBody2D20" parent="Plataformas" instance=ExtResource("1_6ade3")]
-position = Vector2(-680, 137)
+position = Vector2(48, 503)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_onw2a")]
-position = Vector2(-326, -322)
+[node name="RigidBody2D21" parent="Plataformas" instance=ExtResource("1_6ade3")]
+position = Vector2(736, 181)
 
-[node name="RigidBody2D20" parent="." instance=ExtResource("1_6ade3")]
-position = Vector2(718, 132)
+[node name="RigidBody2D22" parent="Plataformas" instance=ExtResource("1_6ade3")]
+position = Vector2(2123, 489)
 
-[node name="RigidBody2D21" parent="." instance=ExtResource("1_6ade3")]
-position = Vector2(2174, 377)
+[node name="RigidBody2D23" parent="Plataformas" instance=ExtResource("1_6ade3")]
+position = Vector2(3382, 180)
 
-[node name="RigidBody2D22" parent="." instance=ExtResource("1_6ade3")]
-position = Vector2(3557, 118)
+[node name="RigidBody2D24" parent="Plataformas" instance=ExtResource("1_6ade3")]
+position = Vector2(4246, 180)
 
-[node name="RigidBody2D23" parent="." instance=ExtResource("1_6ade3")]
-position = Vector2(4536, 111)
+[node name="Node2D" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5320, -70)
+
+[node name="Node2D2" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5320, -24)
+
+[node name="Node2D3" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5369, -70)
+
+[node name="Node2D4" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5369, -24)
+
+[node name="Node2D5" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5988, -24)
+
+[node name="Node2D6" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(6040, -24)
+
+[node name="Node2D7" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5988, -70)
+
+[node name="Node2D8" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(6040, -70)
+
+[node name="Node2D9" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5667, 199)
+
+[node name="Node2D10" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5719, 199)
+
+[node name="Node2D11" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5667, 245)
+
+[node name="Node2D12" parent="Plataformas" instance=ExtResource("3_53lg5")]
+position = Vector2(5719, 245)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_onw2a")]
+position = Vector2(396, 265)
