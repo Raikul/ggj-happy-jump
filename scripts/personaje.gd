@@ -60,6 +60,7 @@ func collapse():
 	bones_left -= 1
 	if bones_left == 0:
 		emit_signal("lost")
+		
 		get_tree().change_scene_to_file("res://game_over.tscn")
 
 func timed_respawn(time):
