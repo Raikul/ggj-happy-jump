@@ -1,0 +1,376 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4iqaoh3bq8lm"]
+
+[ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="1_epjo3"]
+[ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="2_5f251"]
+[ext_resource type="PackedScene" path="res://piso.tscn" id="3_ip8bc"]
+[ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="4_ebrj6"]
+
+[node name="mundo 2 parte 1" type="Node2D"]
+
+[node name="pisos" type="Node" parent="."]
+
+[node name="RigidBody2D" parent="pisos" instance=ExtResource("3_ip8bc")]
+position = Vector2(9, 360)
+
+[node name="RigidBody2D2" parent="pisos" instance=ExtResource("3_ip8bc")]
+position = Vector2(869, 360)
+
+[node name="RigidBody2D3" parent="pisos" instance=ExtResource("3_ip8bc")]
+position = Vector2(1732, 360)
+
+[node name="RigidBody2D4" parent="pisos" instance=ExtResource("3_ip8bc")]
+position = Vector2(2594, 360)
+
+[node name="cubos" type="Node" parent="."]
+
+[node name="Cubos" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, 302)
+
+[node name="Cubos2" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, 302)
+
+[node name="Cubos3" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, 256)
+
+[node name="Cubos4" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, 256)
+
+[node name="Cubos5" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, 210)
+
+[node name="Cubos6" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, 210)
+
+[node name="Cubos7" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, 164)
+
+[node name="Cubos8" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, 164)
+
+[node name="Cubos17" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, 118)
+
+[node name="Cubos18" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, 118)
+
+[node name="Cubos19" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, 72)
+
+[node name="Cubos20" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, 72)
+
+[node name="Cubos9" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, 26)
+
+[node name="Cubos10" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, 26)
+
+[node name="Cubos21" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, -20)
+
+[node name="Cubos22" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, -20)
+
+[node name="Cubos23" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1383, -66)
+
+[node name="Cubos24" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1435, -66)
+
+[node name="Cubos11" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, 302)
+
+[node name="Cubos12" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, 302)
+
+[node name="Cubos13" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, 256)
+
+[node name="Cubos14" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, 256)
+
+[node name="Cubos15" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, 210)
+
+[node name="Cubos16" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, 210)
+
+[node name="Cubos25" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, 164)
+
+[node name="Cubos26" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, 164)
+
+[node name="Cubos27" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, 118)
+
+[node name="Cubos28" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, 118)
+
+[node name="Cubos29" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, 72)
+
+[node name="Cubos30" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, 72)
+
+[node name="Cubos31" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, 26)
+
+[node name="Cubos32" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, 26)
+
+[node name="Cubos33" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -20)
+
+[node name="Cubos34" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -20)
+
+[node name="Cubos35" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -66)
+
+[node name="Cubos36" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -66)
+
+[node name="Cubos37" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -112)
+
+[node name="Cubos38" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -112)
+
+[node name="Cubos39" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -158)
+
+[node name="Cubos40" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -158)
+
+[node name="Cubos41" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -204)
+
+[node name="Cubos42" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -204)
+
+[node name="Cubos43" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -250)
+
+[node name="Cubos44" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -250)
+
+[node name="Cubos45" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -296)
+
+[node name="Cubos46" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -296)
+
+[node name="Cubos47" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -342)
+
+[node name="Cubos48" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -342)
+
+[node name="Cubos49" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -388)
+
+[node name="Cubos50" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -388)
+
+[node name="Cubos51" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -434)
+
+[node name="Cubos52" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -434)
+
+[node name="Cubos53" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(1993, -480)
+
+[node name="Cubos54" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2045, -480)
+
+[node name="Cubos55" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, 302)
+
+[node name="Cubos56" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, 302)
+
+[node name="Cubos57" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, 256)
+
+[node name="Cubos58" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, 256)
+
+[node name="Cubos59" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, 210)
+
+[node name="Cubos60" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, 210)
+
+[node name="Cubos61" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, 164)
+
+[node name="Cubos62" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, 164)
+
+[node name="Cubos63" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, 118)
+
+[node name="Cubos64" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, 118)
+
+[node name="Cubos65" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, 72)
+
+[node name="Cubos66" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, 72)
+
+[node name="Cubos67" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, 26)
+
+[node name="Cubos68" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, 26)
+
+[node name="Cubos69" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -20)
+
+[node name="Cubos70" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -20)
+
+[node name="Cubos71" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -66)
+
+[node name="Cubos72" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -66)
+
+[node name="Cubos73" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -112)
+
+[node name="Cubos74" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -112)
+
+[node name="Cubos75" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -158)
+
+[node name="Cubos76" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -158)
+
+[node name="Cubos77" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -204)
+
+[node name="Cubos78" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -204)
+
+[node name="Cubos79" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -250)
+
+[node name="Cubos80" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -250)
+
+[node name="Cubos81" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -296)
+
+[node name="Cubos82" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -296)
+
+[node name="Cubos83" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -342)
+
+[node name="Cubos84" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -342)
+
+[node name="Cubos85" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -388)
+
+[node name="Cubos86" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -388)
+
+[node name="Cubos87" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -434)
+
+[node name="Cubos88" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -434)
+
+[node name="Cubos89" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -480)
+
+[node name="Cubos90" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -480)
+
+[node name="Cubos91" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -526)
+
+[node name="Cubos92" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -526)
+
+[node name="Cubos93" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -572)
+
+[node name="Cubos94" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -572)
+
+[node name="Cubos95" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -618)
+
+[node name="Cubos96" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -618)
+
+[node name="Cubos97" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -664)
+
+[node name="Cubos98" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -664)
+
+[node name="Cubos99" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -710)
+
+[node name="Cubos100" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -710)
+
+[node name="Cubos101" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -756)
+
+[node name="Cubos102" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -756)
+
+[node name="Cubos103" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -802)
+
+[node name="Cubos104" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -802)
+
+[node name="Cubos105" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -848)
+
+[node name="Cubos106" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -848)
+
+[node name="Cubos107" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -894)
+
+[node name="Cubos108" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -894)
+
+[node name="Cubos109" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -940)
+
+[node name="Cubos110" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -940)
+
+[node name="Cubos111" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -986)
+
+[node name="Cubos112" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -986)
+
+[node name="Cubos113" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2615, -1032)
+
+[node name="Cubos114" parent="cubos" instance=ExtResource("2_5f251")]
+position = Vector2(2667, -1032)
+
+[node name="entidades" type="Node" parent="."]
+
+[node name="CharacterBody2D" parent="entidades" instance=ExtResource("4_ebrj6")]
+position = Vector2(418, 204)
+
+[node name="paredes" type="Node" parent="."]
+
+[node name="pared" parent="paredes" instance=ExtResource("1_epjo3")]
+position = Vector2(-121, -267)
