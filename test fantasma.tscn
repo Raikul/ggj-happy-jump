@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0pxfthonh0bv"]
+
+[ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="1_0pjep"]
+[ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_68r8r"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Plataformas" type="Node" parent="."]
+
+[node name="RigidBody2D20" parent="Plataformas" instance=ExtResource("1_0pjep")]
+position = Vector2(-370, 488)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_68r8r")]
+position = Vector2(9, 144)
+
+[node name="Camera2D" parent="CharacterBody2D2" index="2"]
+zoom = Vector2(0.65, 0.65)
+
+[node name="PlayerMachine" parent="CharacterBody2D2" index="5" node_paths=PackedStringArray("current_state")]
+current_state = NodePath("")
+
+[node name="JumpingState" parent="CharacterBody2D2/PlayerMachine" index="0" node_paths=PackedStringArray("actor")]
+actor = NodePath("")
+
+[node name="WalkingState" parent="CharacterBody2D2/PlayerMachine" index="1" node_paths=PackedStringArray("actor")]
+actor = NodePath("")
+
+[node name="IdleWalkState" parent="CharacterBody2D2/PlayerMachine" index="2" node_paths=PackedStringArray("actor")]
+actor = NodePath("")
+
+[node name="IdleJumpingState" parent="CharacterBody2D2/JumpMachine" index="0" node_paths=PackedStringArray("actor")]
+actor = NodePath("")
+
+[editable path="CharacterBody2D2"]

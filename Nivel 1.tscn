@@ -1,0 +1,224 @@
+[gd_scene load_steps=21 format=3 uid="uid://ccbft8ksi7exr"]
+
+[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_ceevh"]
+[ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_q06ed"]
+[ext_resource type="Script" path="res://Ghost.gd" id="3_nlmsl"]
+[ext_resource type="Texture2D" uid="uid://5ntt8we43fro" path="res://Happy Jump textures/Cat/01_gato_malo.png" id="4_hw7rg"]
+[ext_resource type="Texture2D" uid="uid://bpokn40er180m" path="res://Happy Jump textures/Cat/02_gato_malo.png" id="5_4kncq"]
+[ext_resource type="Texture2D" uid="uid://y43rgypv2c8k" path="res://Happy Jump textures/Cat/03_gato_malo.png" id="6_a0mv8"]
+[ext_resource type="Texture2D" uid="uid://baubinchd71rk" path="res://Happy Jump textures/Cat/04_gato_malo.png" id="7_jo22f"]
+[ext_resource type="Texture2D" uid="uid://dr5jcg8vccvh0" path="res://Happy Jump textures/Cat/05_gato_malo.png" id="8_awsx1"]
+[ext_resource type="Texture2D" uid="uid://bhlo484p3ro72" path="res://Happy Jump textures/Cat/05_gato_malo_menos_delay.png" id="9_w0jyx"]
+[ext_resource type="Texture2D" uid="uid://dsejg4o15kwa0" path="res://Happy Jump textures/Cat/06_gato_malo.png" id="10_y1onb"]
+[ext_resource type="Texture2D" uid="uid://camgvxvwhdshq" path="res://Happy Jump textures/Cat/07_gato_malo_1.png" id="11_12ygn"]
+[ext_resource type="Texture2D" uid="uid://dnae3yex72w6d" path="res://Happy Jump textures/Cat/08_gato_malo.png" id="12_jkmyk"]
+[ext_resource type="Texture2D" uid="uid://b6x74x645xo0g" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota2.png" id="13_630f6"]
+[ext_resource type="Texture2D" uid="uid://b11cifnrap15e" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota3.png" id="14_wo6tu"]
+[ext_resource type="Texture2D" uid="uid://dprnoshttnhmh" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota4.png" id="15_hw3pk"]
+[ext_resource type="Texture2D" uid="uid://dt331j8bsnwx3" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_1.png" id="16_utigx"]
+[ext_resource type="Texture2D" uid="uid://7ntdmqlj2w6e" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_5.png" id="17_5i3eh"]
+[ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="18_ra0d1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tn5uc"]
+radius = 249.0
+height = 498.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ai2xf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hw7rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4kncq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a0mv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jo22f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_awsx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w0jyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y1onb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_12ygn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jkmyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_630f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wo6tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hw3pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_utigx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5i3eh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Mundo 1" type="Node2D"]
+position = Vector2(0, -52)
+metadata/_edit_vertical_guides_ = [5963.0]
+
+[node name="Plataformas" type="Node" parent="."]
+
+[node name="RigidBody2D" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(735, 864)
+
+[node name="RigidBody2D3" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(1599, 864)
+
+[node name="RigidBody2D4" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(2463, 864)
+
+[node name="RigidBody2D5" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(3327, 864)
+
+[node name="RigidBody2D7" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(3505, 413)
+
+[node name="RigidBody2D8" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(4191, 864)
+
+[node name="RigidBody2D9" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(5055, 864)
+
+[node name="RigidBody2D12" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(6299, 413)
+
+[node name="RigidBody2D13" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(7756, 864)
+
+[node name="RigidBody2D11" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(7344, 28)
+
+[node name="RigidBody2D15" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(8473, -402)
+
+[node name="RigidBody2D10" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(5919, 864)
+gravity_scale = 1.0
+
+[node name="RigidBody2D2" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(102, 268)
+rotation = 0.763478
+
+[node name="RigidBody2D6" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(-521, -328)
+rotation = 0.763478
+
+[node name="RigidBody2D32" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(19380, 52)
+
+[node name="RigidBody2D33" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(20581, 334)
+
+[node name="RigidBody2D34" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(20892, 865)
+
+[node name="RigidBody2D35" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(21756, 865)
+
+[node name="RigidBody2D16" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(8620, 864)
+
+[node name="RigidBody2D17" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(9484, 864)
+
+[node name="RigidBody2D18" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(9931, -812)
+
+[node name="RigidBody2D19" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(9807, -403)
+
+[node name="RigidBody2D20" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(11449, 865)
+
+[node name="RigidBody2D21" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(12313, 865)
+
+[node name="RigidBody2D22" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(13177, 865)
+
+[node name="RigidBody2D23" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(14555, 865)
+
+[node name="RigidBody2D24" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(15419, 865)
+
+[node name="RigidBody2D25" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(18300, 865)
+
+[node name="RigidBody2D26" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(13189, 413)
+
+[node name="RigidBody2D27" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(14373, 30)
+
+[node name="RigidBody2D28" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(15634, 414)
+
+[node name="RigidBody2D29" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(16952, 31)
+
+[node name="RigidBody2D30" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(18129, -259)
+
+[node name="RigidBody2D31" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(19164, 865)
+
+[node name="RigidBody2D36" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(20028, 865)
+
+[node name="RigidBody2D37" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(16283, 865)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_q06ed")]
+position = Vector2(-293, -590)
+
+[node name="Camera2D" parent="CharacterBody2D" index="2"]
+zoom = Vector2(0.65, 0.65)
+
+[node name="SkeletonAnimation" parent="CharacterBody2D" index="4"]
+scale = Vector2(0.45, 0.45)
+animation = &"walk"
+frame_progress = 0.444122
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(4372.79, -477.312)
+script = ExtResource("3_nlmsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(-456.795, -161.688)
+shape = SubResource("CapsuleShape2D_tn5uc")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+position = Vector2(-355.795, -147.688)
+sprite_frames = SubResource("SpriteFrames_ai2xf")
+frame_progress = 0.815767
+
+[node name="Sarcofago" type="Sprite2D" parent="."]
+position = Vector2(12680, 775)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_ra0d1")
+
+[editable path="CharacterBody2D"]
