@@ -1,5 +1,7 @@
 class_name DeathState
 extends State
+
+signal skeleton_fallen
  
 @export var actor: CharacterBody2D
 var respawn_timer
@@ -13,6 +15,7 @@ func _ready():
 func Physics_update(_delta):
 	#anim.play
 	#aca
+	skeleton_fallen.emit()
 	if respawn_timer.time_left == 0:
 		respawn_timer.start(3)
 	
