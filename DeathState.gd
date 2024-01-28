@@ -12,6 +12,7 @@ func _ready():
 
 func Physics_update(_delta):
 	#anim.play
+	#aca
 	if respawn_timer.time_left == 0:
 		respawn_timer.start(3)
 	
