@@ -11,7 +11,7 @@ size = Vector2(43539, 50)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Plataformas" type="Node" parent="."]
+[node name="Plataformas" type="Node2D" parent="."]
 
 [node name="RigidBody2D20" parent="Plataformas" instance=ExtResource("1_bd741")]
 position = Vector2(-370, 488)
@@ -203,10 +203,9 @@ zoom = Vector2(0.65, 0.65)
 animation = &"idle"
 frame_progress = 0.0
 
-[node name="DeathZone" type="Area2D" parent="." node_paths=PackedStringArray("character")]
+[node name="DeathZone" type="Area2D" parent="."]
 position = Vector2(7344, 3088)
 script = ExtResource("5_8gt2l")
-character = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2(3208.5, 15)

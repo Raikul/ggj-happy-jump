@@ -1,21 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5w80bdy7giyk"]
+[gd_scene load_steps=10 format=3 uid="uid://c5w80bdy7giyk"]
 
 [ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="1_56l76"]
 [ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="2_fk3nf"]
-[ext_resource type="PackedScene" uid="uid://bvuncb0wmf02o" path="res://personajetest.tscn" id="3_bewi7"]
 [ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="4_ccm0w"]
 [ext_resource type="PackedScene" uid="uid://w8ksu6bm8tol" path="res://slab.tscn" id="5_eieig"]
+[ext_resource type="Script" path="res://scripts/death_zone.gd" id="6_fllik"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="7_gmysk"]
 [ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="7_xgoli"]
-[ext_resource type="PackedScene" uid="uid://cyqlfayaetasq" path="res://piedra chimuelo.tscn" id="8_3dn71"]
-[ext_resource type="Script" path="res://scripts/death_zone.gd" id="6_fllik"]
+[ext_resource type="PackedScene" path="res://piedra chimuelo.tscn" id="8_3dn71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8v3nt"]
 size = Vector2(43539, 50)
 
 [node name="mundo 2 parte 1" type="Node2D"]
 
-[node name="pisos" type="Node" parent="."]
+[node name="pisos" type="Node2D" parent="."]
 
 [node name="RigidBody2D" parent="pisos" instance=ExtResource("1_56l76")]
 position = Vector2(9, 360)
@@ -32,7 +31,7 @@ position = Vector2(2594, 360)
 [node name="RigidBody2D5" parent="pisos" instance=ExtResource("1_56l76")]
 position = Vector2(3457, 360)
 
-[node name="cubos" type="Node" parent="."]
+[node name="cubos" type="Node2D" parent="."]
 
 [node name="Cubos" parent="cubos" instance=ExtResource("2_fk3nf")]
 position = Vector2(1383, 302)
@@ -592,12 +591,7 @@ position = Vector2(17644, -22)
 [node name="Cubos158" parent="cubos" instance=ExtResource("2_fk3nf")]
 position = Vector2(17696, -22)
 
-[node name="entidades" type="Node" parent="."]
-
-[node name="CharacterBody2D" parent="entidades" instance=ExtResource("3_bewi7")]
-position = Vector2(17578, -326)
-
-[node name="slabs" type="Node" parent="."]
+[node name="slabs" type="Node2D" parent="."]
 
 [node name="pared" parent="slabs" instance=ExtResource("4_ccm0w")]
 position = Vector2(-121, -267)
@@ -716,10 +710,10 @@ position = Vector2(23156, -326)
 
 [node name="Node2D6" parent="." instance=ExtResource("8_3dn71")]
 position = Vector2(24051, -326)
-[node name="DeathZone" type="Area2D" parent="." node_paths=PackedStringArray("character")]
+
+[node name="DeathZone" type="Area2D" parent="."]
 position = Vector2(7344, 3088)
 script = ExtResource("6_fllik")
-character = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2(3208.5, 15)

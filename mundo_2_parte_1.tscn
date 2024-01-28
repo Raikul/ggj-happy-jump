@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="1_epjo3"]
 [ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="2_5f251"]
-[ext_resource type="PackedScene" path="res://piso.tscn" id="3_ip8bc"]
+[ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="3_ip8bc"]
 [ext_resource type="PackedScene" uid="uid://bvuncb0wmf02o" path="res://personajetest.tscn" id="3_kb4mi"]
 [ext_resource type="PackedScene" uid="uid://w8ksu6bm8tol" path="res://slab.tscn" id="5_jtu7i"]
 

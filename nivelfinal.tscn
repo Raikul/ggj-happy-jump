@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bindhwmllx568"]
+
+[ext_resource type="PackedScene" uid="uid://ccbft8ksi7exr" path="res://Nivel 1.tscn" id="1_mh68k"]
+[ext_resource type="PackedScene" uid="uid://csq0tgn1p1y2k" path="res://Nivel 3.tscn" id="2_iuuw1"]
+[ext_resource type="PackedScene" uid="uid://c5w80bdy7giyk" path="res://Nivel2.tscn" id="3_7ht2l"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Mundo 1" parent="." instance=ExtResource("1_mh68k")]
+
+[node name="Node2D" parent="." instance=ExtResource("2_iuuw1")]
+position = Vector2(24042, 60)
+
+[node name="mundo 2 parte 1" parent="." instance=ExtResource("3_7ht2l")]
+position = Vector2(36736, 160)
