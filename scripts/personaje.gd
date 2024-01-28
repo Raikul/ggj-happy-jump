@@ -6,17 +6,18 @@ const JUMP_VELOCITY = -900.0
 const CRASH_VELOCITY = 1200
 var bones_left = 4
 signal lost
+var dead = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var crashing = false
-@onready var respawn_timer = $RespawnTimer
+
 
 func _ready():
 	GlobalControls.last_sarcofhagus = position
 	add_to_group("Player")
-	respawn_timer.connect("timeout", respawn)
+
 
 
 func _physics_process(delta):
@@ -60,7 +61,7 @@ func collapse():
 		get_tree().change_scene_to_file("res://game_over.tscn")
 
 func timed_respawn(time):
-	respawn_timer.start(time)
+	dead = true
 
 func respawn():
 	Audio.get_node("EsqueletoArma").play()

@@ -7,7 +7,8 @@ var SPEED = 900
 var JUMP_VELOCITY = -1000
 @onready var skeleton_animation : AnimatedSprite2D = $"../../SkeletonAnimation"
 func Physics_update(_delta):
-	
+	if actor.dead:
+		transitioned.emit("DeathState")
 	var is_jump_just_pressed: bool = Input.is_action_just_pressed("ui_accept")
 	
 	if is_jump_just_pressed:
