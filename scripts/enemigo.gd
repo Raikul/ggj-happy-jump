@@ -18,6 +18,10 @@ func _physics_process(delta):
 		velocity = position.direction_to(player_node.position) * SPEED
 		move_and_slide()
 	
+	if position.distance_to(player_node.position) > 700:
+		$Animation.play("cute")
+	else : $Animation.play("malo")
+	
 	var last_collision = get_last_slide_collision()
 	
 	if last_collision:

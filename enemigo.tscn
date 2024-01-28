@@ -1,15 +1,84 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxr1nkdctxx3s"]
+[gd_scene load_steps=23 format=3 uid="uid://bxr1nkdctxx3s"]
 
 [ext_resource type="Script" path="res://scripts/enemigo.gd" id="1_kge4k"]
 [ext_resource type="Texture2D" uid="uid://dahx2kyx7wj2l" path="res://icon.svg" id="2_gaxp6"]
 [ext_resource type="Texture2D" uid="uid://cdm85ycb5njpg" path="res://assets/dialogo_fantasma.png" id="3_s1tmx"]
 [ext_resource type="Script" path="res://scripts/dialogue.gd" id="3_u1wm3"]
 [ext_resource type="FontFile" uid="uid://fie1gmhfqijk" path="res://assets/LosmentHunter-1G1ve.ttf" id="4_jita8"]
+[ext_resource type="Texture2D" uid="uid://b6x74x645xo0g" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota2.png" id="6_belky"]
+[ext_resource type="Texture2D" uid="uid://b11cifnrap15e" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota3.png" id="7_8wcfs"]
+[ext_resource type="Texture2D" uid="uid://dprnoshttnhmh" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota4.png" id="8_1akto"]
+[ext_resource type="Texture2D" uid="uid://dt331j8bsnwx3" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_1.png" id="9_frgtb"]
+[ext_resource type="Texture2D" uid="uid://7ntdmqlj2w6e" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_5.png" id="10_lt4dv"]
+[ext_resource type="Texture2D" uid="uid://5ntt8we43fro" path="res://Happy Jump textures/Cat/01_gato_malo.png" id="11_mxmf6"]
+[ext_resource type="Texture2D" uid="uid://bpokn40er180m" path="res://Happy Jump textures/Cat/02_gato_malo.png" id="12_gsuex"]
+[ext_resource type="Texture2D" uid="uid://y43rgypv2c8k" path="res://Happy Jump textures/Cat/03_gato_malo.png" id="13_wbpc6"]
+[ext_resource type="Texture2D" uid="uid://baubinchd71rk" path="res://Happy Jump textures/Cat/04_gato_malo.png" id="14_pw8wt"]
+[ext_resource type="Texture2D" uid="uid://dr5jcg8vccvh0" path="res://Happy Jump textures/Cat/05_gato_malo.png" id="15_js0tc"]
+[ext_resource type="Texture2D" uid="uid://bhlo484p3ro72" path="res://Happy Jump textures/Cat/05_gato_malo_menos_delay.png" id="16_jws07"]
+[ext_resource type="Texture2D" uid="uid://dsejg4o15kwa0" path="res://Happy Jump textures/Cat/06_gato_malo.png" id="17_2suro"]
+[ext_resource type="Texture2D" uid="uid://camgvxvwhdshq" path="res://Happy Jump textures/Cat/07_gato_malo_1.png" id="18_ft1kb"]
+[ext_resource type="Texture2D" uid="uid://dnae3yex72w6d" path="res://Happy Jump textures/Cat/08_gato_malo.png" id="19_cfqvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmtx7"]
-size = Vector2(126, 127)
+size = Vector2(196, 221)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a4tbn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n626a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_belky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8wcfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1akto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_frgtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lt4dv")
+}],
+"loop": true,
+"name": &"cute",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_mxmf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gsuex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wbpc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pw8wt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_js0tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jws07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2suro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ft1kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cfqvf")
+}],
+"loop": true,
+"name": &"malo",
+"speed": 5.0
+}]
 
 [node name="Enemy" type="CharacterBody2D"]
 position = Vector2(429, 263)
@@ -17,12 +86,13 @@ motion_mode = 1
 script = ExtResource("1_kge4k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(41, 2)
 texture = ExtResource("2_gaxp6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(41, 1.5)
+position = Vector2(38, -13.5)
 shape = SubResource("RectangleShape2D_qmtx7")
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -55,3 +125,9 @@ vertical_alignment = 1
 autowrap_mode = 2
 script = ExtResource("3_u1wm3")
 metadata/_edit_use_anchors_ = true
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(127, -42)
+scale = Vector2(0.568359, 0.568359)
+sprite_frames = SubResource("SpriteFrames_n626a")
+animation = &"malo"

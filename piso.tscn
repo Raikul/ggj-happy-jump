@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://04oe57obar65"]
+[gd_scene load_steps=3 format=3 uid="uid://04oe57obar65"]
+
+[ext_resource type="Texture2D" uid="uid://dikk3tgjwtbrn" path="res://Happy Jump textures/Terrain/plat_verde_1.png" id="1_u71px"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
 size = Vector2(856, 89)
@@ -19,3 +21,10 @@ offset_top = -11.0
 offset_right = 856.0
 offset_bottom = 80.0
 color = Color(0.462745, 0.0156863, 0.309804, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -57.0
+offset_top = -242.0
+offset_right = 943.0
+offset_bottom = 538.0
+texture = ExtResource("1_u71px")

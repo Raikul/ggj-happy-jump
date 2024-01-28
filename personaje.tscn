@@ -19,9 +19,8 @@
 [ext_resource type="Script" path="res://idle_walk_state.gd" id="11_kj1bn"]
 [ext_resource type="Script" path="res://walking_state.gd" id="11_kpxvq"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1mhq7"]
-radius = 115.0
-height = 302.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogtb7"]
+size = Vector2(199, 307)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1klf7"]
 animations = [{
@@ -90,8 +89,8 @@ texture = ExtResource("2_agb3i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(16, -34)
-shape = SubResource("CapsuleShape2D_1mhq7")
+position = Vector2(13.5, -19.5)
+shape = SubResource("RectangleShape2D_ogtb7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
