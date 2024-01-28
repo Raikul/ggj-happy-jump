@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://u638nj8hxmut"]
+[gd_scene load_steps=30 format=3 uid="uid://u638nj8hxmut"]
 
 [ext_resource type="Texture2D" uid="uid://d3eqcgn0xn13p" path="res://assets/cielo_espectral.png" id="1_6pfp6"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_u5ypw"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://y1hgwbt3t4cn" path="res://scenes/sarcofago.tscn" id="19_2na3d"]
 [ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="20_5n40e"]
 [ext_resource type="Script" path="res://scripts/death_zone.gd" id="21_kcije"]
+[ext_resource type="Texture2D" uid="uid://oob8dt01maes" path="res://assets/silueta_bosque_unido_completp.png" id="26_edr4p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tn5uc"]
 radius = 249.0
@@ -452,15 +453,17 @@ position = Vector2(3208.5, 15)
 shape = SubResource("RectangleShape2D_6wmyk")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
+layer = -2
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(6350, 3000)
+position = Vector2(6836, -43)
+motion_mirroring = Vector2(5000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1039, -221)
-scale = Vector2(3.30588, 3.30588)
-texture = ExtResource("1_6pfp6")
+modulate = Color(1, 1, 1, 0.34902)
+position = Vector2(-2352.9, 675.496)
+scale = Vector2(1.30899, 1.30899)
+texture = ExtResource("26_edr4p")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 

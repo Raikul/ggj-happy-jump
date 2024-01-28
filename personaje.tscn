@@ -25,6 +25,11 @@ size = Vector2(199, 307)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1klf7"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"desarmar",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_642kx")
@@ -103,7 +108,7 @@ wait_time = 3.0
 position = Vector2(20, -28)
 scale = Vector2(0.597656, 0.597656)
 sprite_frames = SubResource("SpriteFrames_1klf7")
-animation = &"walk"
+animation = &"desarmar"
 
 [node name="PlayerMachine" type="Node" parent="." node_paths=PackedStringArray("current_state")]
 script = ExtResource("10_xchf0")
