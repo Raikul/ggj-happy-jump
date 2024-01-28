@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://boghqqm52saci"]
+[gd_scene load_steps=5 format=3 uid="uid://boghqqm52saci"]
 
+[ext_resource type="Texture2D" uid="uid://dgd67xys52fhm" path="res://assets/GAME_OVER_SCREEN.png" id="1_8b8g0"]
 [ext_resource type="Script" path="res://scripts/scene_change_button.gd" id="1_r1qti"]
+[ext_resource type="FontFile" uid="uid://fie1gmhfqijk" path="res://assets/LosmentHunter-1G1ve.ttf" id="2_0fy6w"]
 [ext_resource type="PackedScene" uid="uid://u638nj8hxmut" path="res://NivelTotal.tscn" id="2_cturg"]
 
 [node name="GameOver" type="Control"]
@@ -11,17 +13,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1020.0
+texture = ExtResource("1_8b8g0")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -139.0
+offset_bottom = -139.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0fy6w")
 theme_override_font_sizes/font_size = 128
 text = "PERDISTE"
 horizontal_alignment = 1
@@ -30,6 +41,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(550, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_0fy6w")
 theme_override_font_sizes/font_size = 72
 text = "Volver a jugar"
 script = ExtResource("1_r1qti")

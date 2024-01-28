@@ -1,6 +1,78 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf00ocwi7gjxx"]
+[gd_scene load_steps=16 format=3 uid="uid://bf00ocwi7gjxx"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_qe5bx"]
+[ext_resource type="Texture2D" uid="uid://dumxdors56kpo" path="res://assets/MAIN_MENU.png" id="2_bxmrp"]
+[ext_resource type="FontFile" uid="uid://fie1gmhfqijk" path="res://assets/LosmentHunter-1G1ve.ttf" id="3_bu1aw"]
+[ext_resource type="Texture2D" uid="uid://cs2brf6r5xjlm" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-00.png" id="4_8jbkr"]
+[ext_resource type="Texture2D" uid="uid://domutnjkwk23j" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-01.png" id="5_lu5pd"]
+[ext_resource type="Texture2D" uid="uid://fk0igt5sgmyh" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-02.png" id="6_hvddp"]
+[ext_resource type="Texture2D" uid="uid://cn0t5dyg6fu26" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-03.png" id="7_6jfyx"]
+[ext_resource type="Texture2D" uid="uid://d1i6uv31nk5ob" path="res://assets/Skeleton_Walk/Skeleton-Walk-02.png" id="8_4df8m"]
+[ext_resource type="Texture2D" uid="uid://f1egvt7uc03m" path="res://assets/Skeleton_Walk/Skeleton-Walk-00.png" id="9_eb0vk"]
+[ext_resource type="Texture2D" uid="uid://c82gg6gpa7eii" path="res://assets/Skeleton_Walk/Skeleton-Walk-01.png" id="10_m3o75"]
+[ext_resource type="Texture2D" uid="uid://cw6s23lt2l22q" path="res://assets/Skeleton_Walk/Skeleton-Walk-03.png" id="11_gspsv"]
+[ext_resource type="Texture2D" uid="uid://dk35uu3qmo7g8" path="res://assets/Skeleton_Walk/Skeleton-Walk-04.png" id="12_ysq15"]
+[ext_resource type="Texture2D" uid="uid://cw45s0iiyqpt8" path="res://assets/Skeleton_Walk/Skeleton-Walk-05.png" id="13_mageu"]
+[ext_resource type="Texture2D" uid="uid://dsxs5j7fr2rfj" path="res://assets/Skeleton_Walk/Skeleton-Walk-06.png" id="14_4c7wf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0qtuu"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"desarmar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8jbkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lu5pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hvddp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6jfyx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_4df8m")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_eb0vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m3o75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4df8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gspsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ysq15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mageu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4c7wf")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,6 +83,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qe5bx")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1020.0
+texture = ExtResource("2_bxmrp")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -18,20 +96,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -445.0
-offset_top = -194.0
-offset_right = -296.0
-offset_bottom = -171.0
+offset_left = -174.0
+offset_top = -264.0
+offset_right = 506.0
+offset_bottom = -157.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_bu1aw")
+theme_override_font_sizes/font_size = 100
 text = "Happy Jump Game!"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 554.0
-offset_top = 355.0
-offset_right = 599.0
-offset_bottom = 386.0
+offset_left = 521.0
+offset_top = 758.0
+offset_right = 651.0
+offset_bottom = 837.0
+rotation = -0.277254
+theme_override_fonts/font = ExtResource("3_bu1aw")
+theme_override_font_sizes/font_size = 100
 text = "Play!"
+
+[node name="SkeletonAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(1425, 767)
+scale = Vector2(1.3125, 1.3125)
+sprite_frames = SubResource("SpriteFrames_0qtuu")
+animation = &"idle"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
