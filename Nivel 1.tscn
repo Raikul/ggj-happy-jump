@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ccbft8ksi7exr"]
+[gd_scene load_steps=24 format=3 uid="uid://ccbft8ksi7exr"]
 
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_ceevh"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_q06ed"]
@@ -17,7 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://dprnoshttnhmh" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota4.png" id="15_hw3pk"]
 [ext_resource type="Texture2D" uid="uid://dt331j8bsnwx3" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_1.png" id="16_utigx"]
 [ext_resource type="Texture2D" uid="uid://7ntdmqlj2w6e" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_5.png" id="17_5i3eh"]
+[ext_resource type="PackedScene" uid="uid://y1hgwbt3t4cn" path="res://scenes/sarcofago.tscn" id="18_cuvnp"]
 [ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="18_ra0d1"]
+[ext_resource type="Script" path="res://scripts/death_zone.gd" id="20_mw7ak"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tn5uc"]
 radius = 249.0
@@ -72,6 +74,9 @@ animations = [{
 "name": &"default",
 "speed": 7.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wmyk"]
+size = Vector2(43539, 50)
 
 [node name="Mundo 1" type="Node2D"]
 position = Vector2(0, -52)
@@ -216,9 +221,29 @@ position = Vector2(-355.795, -147.688)
 sprite_frames = SubResource("SpriteFrames_ai2xf")
 frame_progress = 0.815767
 
+[node name="Sarcofago2" parent="." instance=ExtResource("18_cuvnp")]
+position = Vector2(12680, 775)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sarcofago3" parent="." instance=ExtResource("18_cuvnp")]
+position = Vector2(5564, 735)
+scale = Vector2(0.5, 0.5)
+
 [node name="Sarcofago" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(12680, 775)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("18_ra0d1")
+
+[node name="DeathZone" type="Area2D" parent="." node_paths=PackedStringArray("character")]
+position = Vector2(7344, 3088)
+script = ExtResource("20_mw7ak")
+character = NodePath("../CharacterBody2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(3208.5, 15)
+shape = SubResource("RectangleShape2D_6wmyk")
+
+[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 
 [editable path="CharacterBody2D"]

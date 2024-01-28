@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name PersonajePrincipal
 
 const SPEED = 1000.0
 const JUMP_VELOCITY = -900.0
@@ -14,6 +14,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var respawn_timer = $RespawnTimer
 
 func _ready():
+	GlobalControls.last_sarcofhagus = position
 	add_to_group("Player")
 	respawn_timer.connect("timeout", respawn)
 
@@ -56,6 +57,7 @@ func collapse():
 	bones_left -= 1
 	if bones_left == 0:
 		emit_signal("lost")
+		get_tree().change_scene_to_file("res://game_over.tscn")
 
 func timed_respawn(time):
 	respawn_timer.start(time)

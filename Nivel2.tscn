@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5w80bdy7giyk"]
+[gd_scene load_steps=8 format=3 uid="uid://c5w80bdy7giyk"]
 
-[ext_resource type="PackedScene" path="res://piso.tscn" id="1_56l76"]
+[ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="1_56l76"]
 [ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="2_fk3nf"]
 [ext_resource type="PackedScene" uid="uid://bvuncb0wmf02o" path="res://personajetest.tscn" id="3_bewi7"]
 [ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="4_ccm0w"]
 [ext_resource type="PackedScene" uid="uid://w8ksu6bm8tol" path="res://slab.tscn" id="5_eieig"]
+[ext_resource type="Script" path="res://scripts/death_zone.gd" id="6_fllik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8v3nt"]
+size = Vector2(43539, 50)
 
 [node name="mundo 2 parte 1" type="Node2D"]
 
@@ -447,3 +451,14 @@ position = Vector2(1383, -112)
 
 [node name="Cubos114" parent="slabs" instance=ExtResource("2_fk3nf")]
 position = Vector2(1435, -112)
+
+[node name="DeathZone" type="Area2D" parent="." node_paths=PackedStringArray("character")]
+position = Vector2(7344, 3088)
+script = ExtResource("6_fllik")
+character = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(3208.5, 15)
+shape = SubResource("RectangleShape2D_8v3nt")
+
+[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]

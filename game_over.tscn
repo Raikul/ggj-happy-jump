@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://boghqqm52saci"]
+
+[ext_resource type="Script" path="res://scripts/scene_change_button.gd" id="1_r1qti"]
+[ext_resource type="PackedScene" uid="uid://ccbft8ksi7exr" path="res://Nivel 1.tscn" id="2_7gthj"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "PERDISTE"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 72
+text = "Volver a jugar"
+script = ExtResource("1_r1qti")
+scene_to_change = ExtResource("2_7gthj")
+
+[connection signal="button_down" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_button_down"]
