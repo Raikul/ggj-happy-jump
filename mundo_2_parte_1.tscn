@@ -360,10 +360,10 @@ position = Vector2(2615, -986)
 position = Vector2(2667, -986)
 
 [node name="Cubos113" parent="cubos" instance=ExtResource("2_5f251")]
-position = Vector2(2615, -1032)
+position = Vector2(2608, -1070)
 
 [node name="Cubos114" parent="cubos" instance=ExtResource("2_5f251")]
-position = Vector2(2667, -1032)
+position = Vector2(2660, -1070)
 
 [node name="entidades" type="Node" parent="."]
 
