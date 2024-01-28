@@ -6,15 +6,13 @@ size = Vector2(52, 21.5)
 [node name="Slab" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(24, -7)
 gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(78, 11.25)
+position = Vector2(26, 11.25)
 shape = SubResource("RectangleShape2D_u3oxj")
 
 [node name="ColorRect" type="ColorRect" parent="RigidBody2D"]
-offset_left = 52.0
-offset_right = 104.0
+offset_right = 52.0
 offset_bottom = 23.0
 color = Color(0, 0.596078, 0.0156863, 1)
