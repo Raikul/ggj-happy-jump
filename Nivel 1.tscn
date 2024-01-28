@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://ccbft8ksi7exr"]
+[gd_scene load_steps=22 format=3 uid="uid://ccbft8ksi7exr"]
 
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_ceevh"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_q06ed"]
+[ext_resource type="PackedScene" uid="uid://bxr1nkdctxx3s" path="res://enemigo.tscn" id="2_ta8o6"]
 [ext_resource type="Script" path="res://Ghost.gd" id="3_nlmsl"]
 [ext_resource type="Texture2D" uid="uid://5ntt8we43fro" path="res://Happy Jump textures/Cat/01_gato_malo.png" id="4_hw7rg"]
 [ext_resource type="Texture2D" uid="uid://bpokn40er180m" path="res://Happy Jump textures/Cat/02_gato_malo.png" id="5_4kncq"]
@@ -190,18 +191,14 @@ position = Vector2(20028, 865)
 [node name="RigidBody2D37" parent="Plataformas" instance=ExtResource("1_ceevh")]
 position = Vector2(16283, 865)
 
+[node name="Enemy" parent="." instance=ExtResource("2_ta8o6")]
+position = Vector2(2455, -775)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_q06ed")]
 position = Vector2(-293, -590)
 
-[node name="Camera2D" parent="CharacterBody2D" index="2"]
-zoom = Vector2(0.65, 0.65)
-
-[node name="SkeletonAnimation" parent="CharacterBody2D" index="4"]
-scale = Vector2(0.45, 0.45)
-animation = &"walk"
-frame_progress = 0.444122
-
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(4372.79, -477.312)
 script = ExtResource("3_nlmsl")
 
@@ -212,13 +209,11 @@ shape = SubResource("CapsuleShape2D_tn5uc")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
-position = Vector2(-355.795, -147.688)
+position = Vector2(-314.79, -97.688)
 sprite_frames = SubResource("SpriteFrames_ai2xf")
-frame_progress = 0.815767
+frame_progress = 0.449107
 
 [node name="Sarcofago" type="Sprite2D" parent="."]
 position = Vector2(12680, 775)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("18_ra0d1")
-
-[editable path="CharacterBody2D"]

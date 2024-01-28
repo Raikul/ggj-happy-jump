@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5w80bdy7giyk"]
 
-[ext_resource type="PackedScene" path="res://piso.tscn" id="1_56l76"]
+[ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="1_56l76"]
 [ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="2_fk3nf"]
 [ext_resource type="PackedScene" uid="uid://bvuncb0wmf02o" path="res://personajetest.tscn" id="3_bewi7"]
 [ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="4_ccm0w"]

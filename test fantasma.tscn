@@ -16,19 +16,4 @@ position = Vector2(9, 144)
 [node name="Camera2D" parent="CharacterBody2D2" index="2"]
 zoom = Vector2(0.65, 0.65)
 
-[node name="PlayerMachine" parent="CharacterBody2D2" index="5" node_paths=PackedStringArray("current_state")]
-current_state = NodePath("")
-
-[node name="JumpingState" parent="CharacterBody2D2/PlayerMachine" index="0" node_paths=PackedStringArray("actor")]
-actor = NodePath("")
-
-[node name="WalkingState" parent="CharacterBody2D2/PlayerMachine" index="1" node_paths=PackedStringArray("actor")]
-actor = NodePath("")
-
-[node name="IdleWalkState" parent="CharacterBody2D2/PlayerMachine" index="2" node_paths=PackedStringArray("actor")]
-actor = NodePath("")
-
-[node name="IdleJumpingState" parent="CharacterBody2D2/JumpMachine" index="0" node_paths=PackedStringArray("actor")]
-actor = NodePath("")
-
 [editable path="CharacterBody2D2"]
