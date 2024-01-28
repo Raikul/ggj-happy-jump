@@ -355,7 +355,7 @@ position = Vector2(10268, -375)
 position = Vector2(10320, -375)
 
 [node name="Plataforma3" parent="." instance=ExtResource("4_osggu")]
-position = Vector2(36100, 258)
+position = Vector2(35707, 25)
 
 [node name="Enemy" parent="." instance=ExtResource("2_850ve")]
 position = Vector2(2455, -775)
@@ -368,6 +368,9 @@ position = Vector2(19876, -488)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_grhal")]
 position = Vector2(-293, -590)
+
+[node name="Camera2D" parent="CharacterBody2D" index="2"]
+zoom = Vector2(0.55, 0.55)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 visible = false
