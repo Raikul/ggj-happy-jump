@@ -1,0 +1,129 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccbft8ksi7exr"]
+
+[ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_ceevh"]
+[ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_q06ed"]
+
+[node name="Mundo 1" type="Node2D"]
+position = Vector2(0, -52)
+metadata/_edit_vertical_guides_ = [5963.0]
+
+[node name="Plataformas" type="Node" parent="."]
+
+[node name="RigidBody2D" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(735, 864)
+
+[node name="RigidBody2D3" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(1599, 864)
+
+[node name="RigidBody2D4" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(2463, 864)
+
+[node name="RigidBody2D5" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(3327, 864)
+
+[node name="RigidBody2D7" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(3505, 413)
+
+[node name="RigidBody2D8" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(4191, 864)
+
+[node name="RigidBody2D9" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(5055, 864)
+
+[node name="RigidBody2D12" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(6299, 413)
+
+[node name="RigidBody2D13" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(7756, 864)
+
+[node name="RigidBody2D11" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(7344, 28)
+
+[node name="RigidBody2D15" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(8473, -402)
+
+[node name="RigidBody2D10" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(5919, 864)
+gravity_scale = 1.0
+
+[node name="RigidBody2D2" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(102, 268)
+rotation = 0.763478
+
+[node name="RigidBody2D6" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(-521, -328)
+rotation = 0.763478
+
+[node name="RigidBody2D32" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(19380, 52)
+
+[node name="RigidBody2D33" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(20581, 334)
+
+[node name="RigidBody2D34" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(20892, 865)
+
+[node name="RigidBody2D35" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(21756, 865)
+
+[node name="RigidBody2D16" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(8620, 864)
+
+[node name="RigidBody2D17" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(9484, 864)
+
+[node name="RigidBody2D18" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(9931, -812)
+
+[node name="RigidBody2D19" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(9807, -403)
+
+[node name="RigidBody2D20" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(11449, 865)
+
+[node name="RigidBody2D21" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(12313, 865)
+
+[node name="RigidBody2D22" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(13177, 865)
+
+[node name="RigidBody2D23" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(14555, 865)
+
+[node name="RigidBody2D24" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(15419, 865)
+
+[node name="RigidBody2D25" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(18300, 865)
+
+[node name="RigidBody2D26" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(13189, 413)
+
+[node name="RigidBody2D27" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(14373, 30)
+
+[node name="RigidBody2D28" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(15634, 414)
+
+[node name="RigidBody2D29" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(16952, 31)
+
+[node name="RigidBody2D30" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(18129, -259)
+
+[node name="RigidBody2D31" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(19164, 865)
+
+[node name="RigidBody2D36" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(20028, 865)
+
+[node name="RigidBody2D37" parent="Plataformas" instance=ExtResource("1_ceevh")]
+position = Vector2(16283, 865)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_q06ed")]
+position = Vector2(-293, -590)
+
+[node name="Camera2D" parent="CharacterBody2D" index="2"]
+zoom = Vector2(0.65, 0.65)
+
+[editable path="CharacterBody2D"]
