@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://u638nj8hxmut"]
+[gd_scene load_steps=33 format=3 uid="uid://u638nj8hxmut"]
 
 [ext_resource type="Texture2D" uid="uid://d3eqcgn0xn13p" path="res://assets/cielo_espectral.png" id="1_6pfp6"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_u5ypw"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://Ghost.gd" id="4_e4sr0"]
 [ext_resource type="PackedScene" uid="uid://c5w80bdy7giyk" path="res://Nivel2.tscn" id="4_osggu"]
 [ext_resource type="Texture2D" uid="uid://5ntt8we43fro" path="res://Happy Jump textures/Cat/01_gato_malo.png" id="5_0f4ym"]
+[ext_resource type="Texture2D" uid="uid://dotrf77hvv8pj" path="res://assets/quini-6-png.png" id="5_ntxik"]
+[ext_resource type="Script" path="res://Quini.gd" id="5_p0fif"]
 [ext_resource type="Texture2D" uid="uid://bpokn40er180m" path="res://Happy Jump textures/Cat/02_gato_malo.png" id="6_kg8xr"]
 [ext_resource type="Texture2D" uid="uid://y43rgypv2c8k" path="res://Happy Jump textures/Cat/03_gato_malo.png" id="7_7njod"]
 [ext_resource type="Texture2D" uid="uid://baubinchd71rk" path="res://Happy Jump textures/Cat/04_gato_malo.png" id="8_t434e"]
@@ -26,6 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="20_5n40e"]
 [ext_resource type="Script" path="res://scripts/death_zone.gd" id="21_kcije"]
 [ext_resource type="Texture2D" uid="uid://bspvnjjjo84ll" path="res://assets/silueta_bosque_unido_corregido.png" id="26_8fa0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yp58"]
+size = Vector2(791, 604)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tn5uc"]
 radius = 249.0
