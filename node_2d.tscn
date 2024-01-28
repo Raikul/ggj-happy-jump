@@ -112,7 +112,7 @@ position = Vector2(19164, 917)
 position = Vector2(20028, 917)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_eidd4")]
-position = Vector2(14582, -647)
+position = Vector2(-293, -590)
 
 [node name="Camera2D" parent="CharacterBody2D" index="2"]
 zoom = Vector2(0.65, 0.65)
