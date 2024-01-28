@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyqlfayaetasq"]
+
+[ext_resource type="Texture2D" uid="uid://o8c6ujgspmmi" path="res://Happy Jump textures/Stones/chimuelo.png" id="1_h7tkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3ihl"]
+size = Vector2(198, 256.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(130, 179.75)
+shape = SubResource("RectangleShape2D_i3ihl")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(132, 161)
+texture = ExtResource("1_h7tkg")
