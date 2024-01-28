@@ -365,12 +365,6 @@ position = Vector2(10268, -375)
 [node name="Node2D52" parent="Plataformas2" instance=ExtResource("3_w4mpp")]
 position = Vector2(10320, -375)
 
-[node name="ColorRect" type="ColorRect" parent="Plataformas2"]
-offset_left = 21920.0
-offset_top = -1877.0
-offset_right = 21941.0
-offset_bottom = -1875.0
-
 [node name="Enemy" parent="." instance=ExtResource("2_850ve")]
 position = Vector2(2455, -775)
 
@@ -381,7 +375,7 @@ position = Vector2(12189, 123)
 position = Vector2(19876, -488)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_grhal")]
-position = Vector2(-94, 371)
+position = Vector2(-293, -590)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 visible = false
@@ -436,7 +430,7 @@ scale = Vector2(1.30899, 1.30899)
 texture = ExtResource("26_8fa0o")
 
 [node name="mundo 2 parte 1" parent="." instance=ExtResource("4_osggu")]
-position = Vector2(35619, -38)
+position = Vector2(38125, 3)
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 
