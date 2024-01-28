@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://y1hgwbt3t4cn" path="res://scenes/sarcofago.tscn" id="19_2na3d"]
 [ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="20_5n40e"]
 [ext_resource type="Script" path="res://scripts/death_zone.gd" id="21_kcije"]
-[ext_resource type="Texture2D" uid="uid://oob8dt01maes" path="res://assets/silueta_bosque_unido_completp.png" id="26_edr4p"]
+[ext_resource type="Texture2D" uid="uid://bspvnjjjo84ll" path="res://assets/silueta_bosque_unido_corregido.png" id="26_8fa0o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tn5uc"]
 radius = 249.0
@@ -368,6 +368,12 @@ position = Vector2(10320, -375)
 [node name="Enemy" parent="." instance=ExtResource("2_850ve")]
 position = Vector2(2455, -775)
 
+[node name="Enemy2" parent="." instance=ExtResource("2_850ve")]
+position = Vector2(12189, 123)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_850ve")]
+position = Vector2(19876, -488)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_grhal")]
 position = Vector2(-293, -590)
 
@@ -421,7 +427,7 @@ motion_mirroring = Vector2(5000, 0)
 modulate = Color(1, 1, 1, 0.34902)
 position = Vector2(-2352.9, 675.496)
 scale = Vector2(1.30899, 1.30899)
-texture = ExtResource("26_edr4p")
+texture = ExtResource("26_8fa0o")
 
 [node name="mundo 2 parte 1" parent="." instance=ExtResource("4_osggu")]
 position = Vector2(38125, 3)

@@ -12,11 +12,11 @@ func _ready():
 
 func Physics_update(_delta):
 	#anim.play
+	#aca
+	actor.velocity = Vector2.ZERO
 	if respawn_timer.time_left == 0:
 		respawn_timer.start(3)
 	
-	
-
 func respawn():
 	actor.dead = false
 	transitioned.emit("IdleWalkState")
