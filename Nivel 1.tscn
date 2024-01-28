@@ -199,7 +199,7 @@ zoom = Vector2(0.65, 0.65)
 [node name="SkeletonAnimation" parent="CharacterBody2D" index="4"]
 scale = Vector2(0.45, 0.45)
 animation = &"walk"
-frame_progress = 0.444122
+frame_progress = 0.547354
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 position = Vector2(4372.79, -477.312)
@@ -214,7 +214,7 @@ shape = SubResource("CapsuleShape2D_tn5uc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
 position = Vector2(-355.795, -147.688)
 sprite_frames = SubResource("SpriteFrames_ai2xf")
-frame_progress = 0.815767
+frame_progress = 0.688229
 
 [node name="Sarcofago" type="Sprite2D" parent="."]
 position = Vector2(12680, 775)
