@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dcoynqdnflv83"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_5ptrb"]
+[ext_resource type="Script" path="res://win.gd" id="1_8l6n1"]
 [ext_resource type="Texture2D" uid="uid://dumxdors56kpo" path="res://assets/MAIN_MENU.png" id="2_v4a55"]
 [ext_resource type="FontFile" uid="uid://fie1gmhfqijk" path="res://assets/LosmentHunter-1G1ve.ttf" id="3_tay8v"]
 [ext_resource type="Texture2D" uid="uid://b17rt7ivvbjjh" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-00.png" id="4_iglux"]
@@ -102,7 +102,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5ptrb")
+script = ExtResource("1_8l6n1")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

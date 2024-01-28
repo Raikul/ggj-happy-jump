@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5w80bdy7giyk"]
+[gd_scene load_steps=10 format=3 uid="uid://c5w80bdy7giyk"]
 
 [ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="1_56l76"]
 [ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="2_fk3nf"]
+[ext_resource type="PackedScene" uid="uid://clg8uantilxxp" path="res://pared.tscn" id="4_ccm0w"]
 [ext_resource type="PackedScene" uid="uid://w8ksu6bm8tol" path="res://slab.tscn" id="5_eieig"]
 [ext_resource type="Script" path="res://scripts/death_zone.gd" id="6_fllik"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="7_gmysk"]
 [ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="7_xgoli"]
-[ext_resource type="PackedScene" uid="uid://cyqlfayaetasq" path="res://piedra chimuelo.tscn" id="8_3dn71"]
+[ext_resource type="PackedScene" path="res://piedra chimuelo.tscn" id="8_3dn71"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8v3nt"]
 size = Vector2(43539, 50)
@@ -434,12 +435,6 @@ position = Vector2(9619, -1307)
 [node name="Cubos162" parent="cubos" instance=ExtResource("2_fk3nf")]
 position = Vector2(9671, -1307)
 
-[node name="ColorRect" type="ColorRect" parent="cubos/Cubos162"]
-offset_left = 35.0
-offset_top = 44.0
-offset_right = 48.0
-offset_bottom = 47.0
-
 [node name="Cubos135" parent="cubos" instance=ExtResource("2_fk3nf")]
 position = Vector2(11902, -2591)
 
@@ -525,16 +520,16 @@ position = Vector2(12807, -270)
 position = Vector2(12859, -270)
 
 [node name="Cubos175" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(13759, -138)
+position = Vector2(13777, -27)
 
 [node name="Cubos176" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(13811, -138)
+position = Vector2(13829, -27)
 
 [node name="Cubos177" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(13863, -138)
+position = Vector2(13881, -27)
 
 [node name="Cubos178" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(13915, -138)
+position = Vector2(13933, -27)
 
 [node name="Cubos171" parent="cubos" instance=ExtResource("2_fk3nf")]
 position = Vector2(11702, -48)
@@ -561,16 +556,16 @@ position = Vector2(14838, -333)
 position = Vector2(14890, -333)
 
 [node name="Cubos167" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(15694, -197)
+position = Vector2(15667, -26)
 
 [node name="Cubos168" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(15746, -197)
+position = Vector2(15719, -26)
 
 [node name="Cubos169" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(15798, -197)
+position = Vector2(15771, -26)
 
 [node name="Cubos170" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(15850, -197)
+position = Vector2(15823, -26)
 
 [node name="Cubos151" parent="cubos" instance=ExtResource("2_fk3nf")]
 position = Vector2(16617, -361)
@@ -585,18 +580,21 @@ position = Vector2(16721, -361)
 position = Vector2(16773, -361)
 
 [node name="Cubos155" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(17516, -200)
+position = Vector2(17540, -22)
 
 [node name="Cubos156" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(17568, -200)
+position = Vector2(17592, -22)
 
 [node name="Cubos157" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(17620, -200)
+position = Vector2(17644, -22)
 
 [node name="Cubos158" parent="cubos" instance=ExtResource("2_fk3nf")]
-position = Vector2(17672, -200)
+position = Vector2(17696, -22)
 
 [node name="slabs" type="Node2D" parent="."]
+
+[node name="pared" parent="slabs" instance=ExtResource("4_ccm0w")]
+position = Vector2(-121, -267)
 
 [node name="Slab" parent="slabs" instance=ExtResource("5_eieig")]
 position = Vector2(1486, 325)
@@ -672,46 +670,46 @@ texture = ExtResource("7_xgoli")
 position = Vector2(13923, -3752)
 
 [node name="RigidBody2D2" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(18392, -111)
+position = Vector2(19599, -4)
 
 [node name="RigidBody2D3" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(19256, -111)
+position = Vector2(20463, -4)
 
 [node name="RigidBody2D4" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(20119, -111)
+position = Vector2(21326, -4)
 
 [node name="RigidBody2D5" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(20982, -111)
+position = Vector2(22189, -4)
 
 [node name="RigidBody2D6" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(21843, -111)
+position = Vector2(23050, -4)
 
 [node name="RigidBody2D7" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(22706, -111)
+position = Vector2(23913, -4)
 
 [node name="RigidBody2D8" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(23569, -111)
+position = Vector2(24776, -4)
 
 [node name="RigidBody2D9" parent="." instance=ExtResource("7_gmysk")]
-position = Vector2(24432, -111)
+position = Vector2(25639, -4)
 
 [node name="Node2D" parent="." instance=ExtResource("8_3dn71")]
-position = Vector2(18582, -431)
+position = Vector2(19789, -324)
 
 [node name="Node2D2" parent="." instance=ExtResource("8_3dn71")]
-position = Vector2(19411, -433)
+position = Vector2(20618, -326)
 
 [node name="Node2D3" parent="." instance=ExtResource("8_3dn71")]
-position = Vector2(20208, -435)
+position = Vector2(21415, -328)
 
 [node name="Node2D4" parent="." instance=ExtResource("8_3dn71")]
-position = Vector2(21090, -433)
+position = Vector2(22297, -326)
 
 [node name="Node2D5" parent="." instance=ExtResource("8_3dn71")]
-position = Vector2(21949, -433)
+position = Vector2(23156, -326)
 
 [node name="Node2D6" parent="." instance=ExtResource("8_3dn71")]
-position = Vector2(22844, -433)
+position = Vector2(24051, -326)
 
 [node name="DeathZone" type="Area2D" parent="."]
 position = Vector2(7344, 3088)

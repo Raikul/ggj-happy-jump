@@ -1,12 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://bf00ocwi7gjxx"]
+[gd_scene load_steps=20 format=3 uid="uid://bf00ocwi7gjxx"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_qe5bx"]
 [ext_resource type="Texture2D" uid="uid://dumxdors56kpo" path="res://assets/MAIN_MENU.png" id="2_bxmrp"]
 [ext_resource type="FontFile" uid="uid://fie1gmhfqijk" path="res://assets/LosmentHunter-1G1ve.ttf" id="3_bu1aw"]
 [ext_resource type="Texture2D" uid="uid://cs2brf6r5xjlm" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-00.png" id="4_8jbkr"]
+[ext_resource type="Texture2D" uid="uid://b17rt7ivvbjjh" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-00.png" id="4_l2s63"]
+[ext_resource type="Texture2D" uid="uid://disiqd5uuvauk" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-01.png" id="5_5hdxp"]
 [ext_resource type="Texture2D" uid="uid://domutnjkwk23j" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-01.png" id="5_lu5pd"]
 [ext_resource type="Texture2D" uid="uid://fk0igt5sgmyh" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-02.png" id="6_hvddp"]
+[ext_resource type="Texture2D" uid="uid://7onqya5yaa5o" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-02.png" id="6_ugccr"]
 [ext_resource type="Texture2D" uid="uid://cn0t5dyg6fu26" path="res://assets/Skeleton_Idle/Skeleton-Stand-Idle-03.png" id="7_6jfyx"]
+[ext_resource type="Texture2D" uid="uid://fi02auofubf7" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-03.png" id="7_judbg"]
 [ext_resource type="Texture2D" uid="uid://d1i6uv31nk5ob" path="res://assets/Skeleton_Walk/Skeleton-Walk-02.png" id="8_4df8m"]
 [ext_resource type="Texture2D" uid="uid://f1egvt7uc03m" path="res://assets/Skeleton_Walk/Skeleton-Walk-00.png" id="9_eb0vk"]
 [ext_resource type="Texture2D" uid="uid://c82gg6gpa7eii" path="res://assets/Skeleton_Walk/Skeleton-Walk-01.png" id="10_m3o75"]
@@ -20,6 +24,23 @@ animations = [{
 "frames": [],
 "loop": true,
 "name": &"desarmar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_l2s63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5hdxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ugccr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_judbg")
+}],
+"loop": true,
+"name": &"head",
 "speed": 5.0
 }, {
 "frames": [{
@@ -121,6 +142,6 @@ text = "Play!"
 position = Vector2(1425, 767)
 scale = Vector2(1.3125, 1.3125)
 sprite_frames = SubResource("SpriteFrames_0qtuu")
-animation = &"idle"
+animation = &"head"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -4,6 +4,7 @@ extends State
 signal skeleton_fallen
  
 @export var actor: CharacterBody2D
+@onready var skeleton_animation = actor.get_node("Visuals/SkeletonAnimation")
 var respawn_timer
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -45,6 +45,8 @@ func _physics_process(delta):
 			crash()
 		if last_collision.get_collider().is_in_group("Enemy"): 
 			get_ghosted()
+		if last_collision.get_collider().is_in_group("Quini6"):
+			get_tree().change_scene_to_file("res://win.tscn")
 
 func get_ghosted():
 	modulate = Color.GREEN_YELLOW

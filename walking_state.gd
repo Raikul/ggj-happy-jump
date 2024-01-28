@@ -5,7 +5,7 @@ extends State
 
 var SPEED = 900
 var JUMP_VELOCITY = -1000
-@onready var skeleton_animation : AnimatedSprite2D = $"../../Visuals/SkeletonAnimation"
+@onready var skeleton_animation = actor.get_node("Visuals/SkeletonAnimation")
 func Physics_update(_delta):
 	if actor.dead:
 		transitioned.emit("DeathState")

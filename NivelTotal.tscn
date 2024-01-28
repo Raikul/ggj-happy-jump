@@ -124,8 +124,14 @@ position = Vector2(1599, 864)
 [node name="RigidBody2D4" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(2463, 864)
 
+[node name="RigidBody2D5" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(3327, 864)
+
 [node name="RigidBody2D7" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(3505, 413)
+
+[node name="RigidBody2D8" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(4191, 864)
 
 [node name="RigidBody2D9" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(5055, 864)
@@ -133,11 +139,18 @@ position = Vector2(5055, 864)
 [node name="RigidBody2D12" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(6299, 413)
 
+[node name="RigidBody2D13" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(7756, 864)
+
 [node name="RigidBody2D11" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(7344, 28)
 
 [node name="RigidBody2D15" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(8473, -402)
+
+[node name="RigidBody2D10" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(5919, 864)
+gravity_scale = 1.0
 
 [node name="RigidBody2D2" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(102, 268)
@@ -153,14 +166,41 @@ position = Vector2(19380, 52)
 [node name="RigidBody2D33" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(20581, 334)
 
+[node name="RigidBody2D34" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(20892, 865)
+
 [node name="RigidBody2D35" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(21756, 865)
+
+[node name="RigidBody2D16" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(8620, 864)
+
+[node name="RigidBody2D17" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(9484, 864)
+
+[node name="RigidBody2D18" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(9931, -812)
 
 [node name="RigidBody2D19" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(9807, -403)
 
 [node name="RigidBody2D20" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(11449, 865)
+
+[node name="RigidBody2D21" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(12313, 865)
+
+[node name="RigidBody2D22" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(13177, 865)
+
+[node name="RigidBody2D23" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(14555, 865)
+
+[node name="RigidBody2D24" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(15419, 865)
+
+[node name="RigidBody2D25" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(18300, 865)
 
 [node name="RigidBody2D26" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(13189, 413)
@@ -176,6 +216,15 @@ position = Vector2(16952, 31)
 
 [node name="RigidBody2D30" parent="Plataformas" instance=ExtResource("1_u5ypw")]
 position = Vector2(18129, -259)
+
+[node name="RigidBody2D31" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(19164, 865)
+
+[node name="RigidBody2D36" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(20028, 865)
+
+[node name="RigidBody2D37" parent="Plataformas" instance=ExtResource("1_u5ypw")]
+position = Vector2(16283, 865)
 
 [node name="Plataformas2" type="Node2D" parent="."]
 position = Vector2(23392, 579)
@@ -354,23 +403,38 @@ position = Vector2(10268, -375)
 [node name="Node2D52" parent="Plataformas2" instance=ExtResource("3_w4mpp")]
 position = Vector2(10320, -375)
 
+[node name="RigidBody2D25" parent="Plataformas2" instance=ExtResource("2_fmk0r")]
+position = Vector2(10394, 214)
+
+[node name="RigidBody2D31" parent="Plataformas2" instance=ExtResource("1_u5ypw")]
+position = Vector2(11258, 213)
+
+[node name="Quini" type="StaticBody2D" parent="."]
+z_index = 5
+position = Vector2(2040, 238)
+script = ExtResource("5_p0fif")
+
+[node name="TextureRect" type="TextureRect" parent="Quini"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_ntxik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quini"]
+position = Vector2(630, 400)
+shape = SubResource("RectangleShape2D_4yp58")
+
 [node name="Plataforma3" parent="." instance=ExtResource("4_osggu")]
-position = Vector2(35707, 25)
+position = Vector2(22319, 4055)
 
 [node name="Enemy" parent="." instance=ExtResource("2_850ve")]
 position = Vector2(2455, -775)
 
 [node name="Enemy2" parent="." instance=ExtResource("2_850ve")]
+visible = false
 position = Vector2(12189, 123)
-
-[node name="Enemy3" parent="." instance=ExtResource("2_850ve")]
-position = Vector2(19876, -488)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_grhal")]
 position = Vector2(-293, -590)
-
-[node name="Camera2D" parent="CharacterBody2D" index="2"]
-zoom = Vector2(0.55, 0.55)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 visible = false
