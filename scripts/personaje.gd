@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name PersonajePrincipal
 
+@export var progressive_frames : Array[SpriteFrames]
 const SPEED = 1000.0
 const JUMP_VELOCITY = -900.0
 const CRASH_VELOCITY = 1200
@@ -17,6 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	GlobalControls.last_sarcofhagus = position
 	add_to_group("Player")
+	#$Visuals/SkeletonAnimation.sprite_frames = progressive_frames[3]
 
 
 
@@ -67,3 +69,20 @@ func timed_respawn(time):
 func respawn():
 	Audio.get_node("EsqueletoArma").play()
 	modulate = Color.WHITE
+
+
+func _on_death_state_skeleton_fallen():
+	velocity.x = 0
+	$Visuals/Smoke.show()
+	$Visuals/SkeletonAnimation.hide()
+	await get_tree().create_timer(1).timeout
+	$Visuals/Smoke.hide()
+	$Visuals/Desarmado.show()
+	await get_tree().create_timer(1).timeout
+	$Visuals/Smoke.show()
+	$Visuals/Desarmado.hide()
+	await get_tree().create_timer(1).timeout
+	$Visuals/SkeletonAnimation.sprite_frames = progressive_frames[(bones_left - 4) * -1]
+	$Visuals/SkeletonAnimation.show()
+	$Visuals/Smoke.hide()
+	
