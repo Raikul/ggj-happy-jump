@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://04oe57obar65"]
 
-[ext_resource type="Texture2D" uid="uid://c8ppqne8vtx64" path="res://Happy Jump textures/Terrain/Triceratops_plat1.png" id="1_8bbs1"]
+[ext_resource type="Texture2D" uid="uid://dikk3tgjwtbrn" path="res://Happy Jump textures/Terrain/plat_verde_1.png" id="1_u71px"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
 size = Vector2(856, 89)
@@ -27,4 +27,4 @@ offset_left = -57.0
 offset_top = -242.0
 offset_right = 943.0
 offset_bottom = 538.0
-texture = ExtResource("1_8bbs1")
+texture = ExtResource("1_u71px")

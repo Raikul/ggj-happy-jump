@@ -3,8 +3,10 @@ extends Label
 
 var messages = [
 	"rEVIVIDevolve la guita!",
-	"Dijiste que ni muerto",
-	"apostaste la casa y la perdiste, PAPANATAS!"
+	"Hasta muerto querés ir a apostar",
+	"Apostaste la casa y la perdiste, PAPANATAS!",
+	"El bebe es tuyo, hacete cargo gil!",
+	"No podes escapar de la muerte ni de los impuestos!"
 ]
 
 var char_timer: Timer

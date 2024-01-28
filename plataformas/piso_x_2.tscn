@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvrcrn5qu3g0r"]
+[gd_scene load_steps=5 format=3 uid="uid://cvrcrn5qu3g0r"]
 
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_db1s5"]
+[ext_resource type="Texture2D" uid="uid://c8ppqne8vtx64" path="res://Happy Jump textures/Terrain/Triceratops_plat1.png" id="2_7706l"]
 [ext_resource type="Texture2D" uid="uid://4mw5kx7cssy4" path="res://Happy Jump textures/Terrain/tierra_plat_1.png" id="2_xk2mw"]
 [ext_resource type="Texture2D" uid="uid://dvd0xmch8vnwm" path="res://Happy Jump textures/Terrain/tierra_plat_2.png" id="3_50il0"]
 
@@ -17,7 +18,7 @@ offset_left = 1672.0
 offset_top = -234.0
 offset_right = 2672.0
 offset_bottom = 546.0
-texture = ExtResource("2_xk2mw")
+texture = ExtResource("2_7706l")
 
 [node name="TextureRect5" type="TextureRect" parent="." index="4"]
 offset_left = 2816.0
