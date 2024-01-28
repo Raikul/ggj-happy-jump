@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ttnwqea40uil"]
+[gd_scene load_steps=7 format=3 uid="uid://ttnwqea40uil"]
 
 [ext_resource type="Texture2D" uid="uid://4mw5kx7cssy4" path="res://Happy Jump textures/Terrain/tierra_plat_1.png" id="1_owb0x"]
+[ext_resource type="Script" path="res://plataformas/piso.gd" id="1_qe7eg"]
+[ext_resource type="Texture2D" uid="uid://dikk3tgjwtbrn" path="res://Happy Jump textures/Terrain/plat_verde_1.png" id="2_s0gft"]
+[ext_resource type="Texture2D" uid="uid://dvd0xmch8vnwm" path="res://Happy Jump textures/Terrain/tierra_plat_2.png" id="4_g6n3x"]
+[ext_resource type="Texture2D" uid="uid://c8ppqne8vtx64" path="res://Happy Jump textures/Terrain/Triceratops_plat1.png" id="5_wr0sp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfsxh"]
 size = Vector2(858, 89)
@@ -9,6 +13,8 @@ size = Vector2(858, 89)
 position = Vector2(7, 569)
 disable_mode = 1
 gravity_scale = 0.0
+script = ExtResource("1_qe7eg")
+texturas = Array[Texture2D]([ExtResource("2_s0gft"), ExtResource("1_owb0x"), ExtResource("4_g6n3x"), ExtResource("5_wr0sp")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 modulate = Color(0.133333, 0, 0.0588235, 1)
