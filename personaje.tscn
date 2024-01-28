@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dck3uk6nmem87"]
+[gd_scene load_steps=22 format=3 uid="uid://dck3uk6nmem87"]
 
 [ext_resource type="Script" path="res://scripts/personaje.gd" id="1_jy5jl"]
 [ext_resource type="Texture2D" uid="uid://dahx2kyx7wj2l" path="res://icon.svg" id="2_agb3i"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://idle_jumping_state.gd" id="11_kb7h2"]
 [ext_resource type="Script" path="res://idle_walk_state.gd" id="11_kj1bn"]
 [ext_resource type="Script" path="res://walking_state.gd" id="11_kpxvq"]
+[ext_resource type="Script" path="res://DeathState.gd" id="18_xyrrx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogtb7"]
 size = Vector2(199, 307)
@@ -54,6 +55,10 @@ actor = NodePath("../..")
 
 [node name="IdleWalkState" type="Node" parent="PlayerMachine" node_paths=PackedStringArray("actor")]
 script = ExtResource("11_kj1bn")
+actor = NodePath("../..")
+
+[node name="DeathState" type="Node" parent="PlayerMachine" node_paths=PackedStringArray("actor")]
+script = ExtResource("18_xyrrx")
 actor = NodePath("../..")
 
 [node name="JumpMachine" type="Node" parent="."]

@@ -87,6 +87,17 @@ size = Vector2(43539, 50)
 position = Vector2(0, -52)
 metadata/_edit_vertical_guides_ = [5963.0]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6pfp6")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
 offset_left = -1582.0
@@ -441,6 +452,7 @@ position = Vector2(3208.5, 15)
 shape = SubResource("RectangleShape2D_6wmyk")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(6350, 3000)
