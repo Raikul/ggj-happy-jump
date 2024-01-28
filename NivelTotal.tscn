@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://u638nj8hxmut"]
+[gd_scene load_steps=29 format=3 uid="uid://u638nj8hxmut"]
 
+[ext_resource type="Texture2D" uid="uid://d3eqcgn0xn13p" path="res://assets/cielo_espectral.png" id="1_6pfp6"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_u5ypw"]
 [ext_resource type="PackedScene" uid="uid://bxr1nkdctxx3s" path="res://enemigo.tscn" id="2_850ve"]
 [ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="2_fmk0r"]
@@ -85,6 +86,14 @@ size = Vector2(43539, 50)
 [node name="Mundo 1" type="Node2D"]
 position = Vector2(0, -52)
 metadata/_edit_vertical_guides_ = [5963.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_left = -1582.0
+offset_top = -1440.0
+offset_right = 5328.0
+offset_bottom = 2231.0
+texture = ExtResource("1_6pfp6")
 
 [node name="Plataformas" type="Node2D" parent="."]
 position = Vector2(-292, 499)
@@ -430,6 +439,16 @@ character = NodePath("../CharacterBody2D")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2(3208.5, 15)
 shape = SubResource("RectangleShape2D_6wmyk")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(6350, 3000)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1039, -221)
+scale = Vector2(3.30588, 3.30588)
+texture = ExtResource("1_6pfp6")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 

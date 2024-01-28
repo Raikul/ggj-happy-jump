@@ -143,10 +143,9 @@ position = Vector2(12680, 775)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("18_ra0d1")
 
-[node name="DeathZone" type="Area2D" parent="." node_paths=PackedStringArray("character")]
+[node name="DeathZone" type="Area2D" parent="."]
 position = Vector2(7344, 3088)
 script = ExtResource("20_mw7ak")
-character = NodePath("")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2(3208.5, 15)
