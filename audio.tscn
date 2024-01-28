@@ -19,3 +19,5 @@ stream = ExtResource("3_8mmlj")
 
 [node name="FinDeNivel" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ogdvm")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
