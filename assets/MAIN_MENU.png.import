@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctsy7ocgcqplh"
-path="res://.godot/imported/Skeleton-EXPLODE-01.png-0fa630b9b808170e01329412396f034b.ctex"
+uid="uid://dumxdors56kpo"
+path="res://.godot/imported/MAIN_MENU.png-f22772a118a09cbfbca87d1735177875.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Desarmarod/Skeleton-EXPLODE-01.png"
-dest_files=["res://.godot/imported/Skeleton-EXPLODE-01.png-0fa630b9b808170e01329412396f034b.ctex"]
+source_file="res://assets/MAIN_MENU.png"
+dest_files=["res://.godot/imported/MAIN_MENU.png-f22772a118a09cbfbca87d1735177875.ctex"]
 
 [params]
 

@@ -23,4 +23,4 @@ func Physics_update(_delta):
 	if direction:
 		transitioned.emit("WalkingState")
 	else:
-		$"../../SkeletonAnimation".play("idle")
+		$"../../Visuals/SkeletonAnimation".play("idle")
