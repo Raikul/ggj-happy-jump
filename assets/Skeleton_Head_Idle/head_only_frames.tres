@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://cvbgtcn1i3hpp"]
+
+[ext_resource type="Texture2D" uid="uid://b17rt7ivvbjjh" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-00.png" id="1_pevhq"]
+[ext_resource type="Texture2D" uid="uid://disiqd5uuvauk" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-01.png" id="2_3l37g"]
+[ext_resource type="Texture2D" uid="uid://7onqya5yaa5o" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-02.png" id="3_enss6"]
+[ext_resource type="Texture2D" uid="uid://fi02auofubf7" path="res://assets/Skeleton_Head_Idle/Skeleton-CALAVERA-GUSANO-Stand-03.png" id="4_ynodh"]
+[ext_resource type="Texture2D" uid="uid://ga8ckk5bkaju" path="res://assets/Skeleton_Head_Walk/Skeleton-CALAVERA-GUSANO-Walk-00.png" id="5_c2wrn"]
+[ext_resource type="Texture2D" uid="uid://doxexw15cs6kc" path="res://assets/Skeleton_Head_Walk/Skeleton-CALAVERA-GUSANO-Walk-01.png" id="6_a0n8h"]
+[ext_resource type="Texture2D" uid="uid://dgsad2vkn8qsr" path="res://assets/Skeleton_Head_Walk/Skeleton-CALAVERA-GUSANO-Walk-02.png" id="7_src1f"]
+[ext_resource type="Texture2D" uid="uid://b8vjs47omuhri" path="res://assets/Skeleton_Head_Walk/Skeleton-CALAVERA-GUSANO-Walk-03.png" id="8_vfksl"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pevhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3l37g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_enss6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ynodh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c2wrn")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c2wrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a0n8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_src1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vfksl")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]

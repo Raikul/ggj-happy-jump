@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://l2wacvcutjq5"]
+
+[ext_resource type="Texture2D" uid="uid://c3u6xx27lbrj1" path="res://assets/Skeleton_OnlyHands_Walk/Skeleton-CANGREJO-ARANA-Walk-01-B.png" id="1_fhe84"]
+[ext_resource type="Texture2D" uid="uid://6bconaiiboxe" path="res://assets/Skeleton_OnlyHands_Walk/Skeleton-CANGREJO-ARANA-Walk-02-B.png" id="2_058d7"]
+[ext_resource type="Texture2D" uid="uid://ckkcl7wg05324" path="res://assets/Skeleton_OnlyHands_Walk/Skeleton-CANGREJO-ARANA-Walk-00-B.png" id="3_dqd8e"]
+[ext_resource type="Texture2D" uid="uid://b4tl1nqwpgx2l" path="res://assets/Skeleton_OnlyHands_Walk/Skeleton-CANGREJO-ARANA-Walk-03-B.png" id="4_pf62k"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fhe84")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_058d7")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dqd8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_fhe84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_058d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pf62k")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
