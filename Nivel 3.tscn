@@ -1,13 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://csq0tgn1p1y2k"]
+[gd_scene load_steps=5 format=3 uid="uid://csq0tgn1p1y2k"]
 
 [ext_resource type="PackedScene" uid="uid://04oe57obar65" path="res://piso.tscn" id="1_bd741"]
 [ext_resource type="PackedScene" uid="uid://dgvb135hkaoq0" path="res://Cubo.tscn" id="2_kixev"]
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="3_2eubc"]
 [ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="3_tl70h"]
-[ext_resource type="Script" path="res://scripts/death_zone.gd" id="5_8gt2l"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg82p"]
-size = Vector2(43539, 50)
 
 [node name="Node2D" type="Node2D"]
 
@@ -202,16 +198,6 @@ zoom = Vector2(0.65, 0.65)
 [node name="SkeletonAnimation" parent="CharacterBody2D2" index="4"]
 animation = &"idle"
 frame_progress = 0.0
-
-[node name="DeathZone" type="Area2D" parent="."]
-position = Vector2(7344, 3088)
-script = ExtResource("5_8gt2l")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(3208.5, 15)
-shape = SubResource("RectangleShape2D_yg82p")
-
-[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
 
 [editable path="Plataformas/RigidBody2D21"]
 [editable path="CharacterBody2D2"]

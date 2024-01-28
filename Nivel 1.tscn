@@ -1,13 +1,83 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccbft8ksi7exr"]
+[gd_scene load_steps=25 format=3 uid="uid://ccbft8ksi7exr"]
 
 [ext_resource type="PackedScene" uid="uid://ttnwqea40uil" path="res://plataformas/piso.tscn" id="1_ceevh"]
+[ext_resource type="PackedScene" uid="uid://dck3uk6nmem87" path="res://personaje.tscn" id="2_q06ed"]
 [ext_resource type="PackedScene" uid="uid://bxr1nkdctxx3s" path="res://enemigo.tscn" id="2_ta8o6"]
+[ext_resource type="Script" path="res://Ghost.gd" id="3_nlmsl"]
+[ext_resource type="Texture2D" uid="uid://5ntt8we43fro" path="res://Happy Jump textures/Cat/01_gato_malo.png" id="4_hw7rg"]
+[ext_resource type="Texture2D" uid="uid://bpokn40er180m" path="res://Happy Jump textures/Cat/02_gato_malo.png" id="5_4kncq"]
+[ext_resource type="Texture2D" uid="uid://y43rgypv2c8k" path="res://Happy Jump textures/Cat/03_gato_malo.png" id="6_a0mv8"]
+[ext_resource type="Texture2D" uid="uid://baubinchd71rk" path="res://Happy Jump textures/Cat/04_gato_malo.png" id="7_jo22f"]
+[ext_resource type="Texture2D" uid="uid://dr5jcg8vccvh0" path="res://Happy Jump textures/Cat/05_gato_malo.png" id="8_awsx1"]
+[ext_resource type="Texture2D" uid="uid://bhlo484p3ro72" path="res://Happy Jump textures/Cat/05_gato_malo_menos_delay.png" id="9_w0jyx"]
+[ext_resource type="Texture2D" uid="uid://dsejg4o15kwa0" path="res://Happy Jump textures/Cat/06_gato_malo.png" id="10_y1onb"]
+[ext_resource type="Texture2D" uid="uid://camgvxvwhdshq" path="res://Happy Jump textures/Cat/07_gato_malo_1.png" id="11_12ygn"]
+[ext_resource type="Texture2D" uid="uid://dnae3yex72w6d" path="res://Happy Jump textures/Cat/08_gato_malo.png" id="12_jkmyk"]
+[ext_resource type="Texture2D" uid="uid://b6x74x645xo0g" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota2.png" id="13_630f6"]
+[ext_resource type="Texture2D" uid="uid://b11cifnrap15e" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota3.png" id="14_wo6tu"]
+[ext_resource type="Texture2D" uid="uid://dprnoshttnhmh" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota4.png" id="15_hw3pk"]
+[ext_resource type="Texture2D" uid="uid://dt331j8bsnwx3" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_1.png" id="16_utigx"]
+[ext_resource type="Texture2D" uid="uid://7ntdmqlj2w6e" path="res://Happy Jump textures/Cat/gatito_ghost_cute_flota_5.png" id="17_5i3eh"]
 [ext_resource type="PackedScene" uid="uid://y1hgwbt3t4cn" path="res://scenes/sarcofago.tscn" id="18_cuvnp"]
 [ext_resource type="Texture2D" uid="uid://d1ejfsdh6vb2d" path="res://Happy Jump textures/Sarcofhagus/sarcofago.png" id="18_ra0d1"]
 [ext_resource type="Script" path="res://scripts/death_zone.gd" id="20_mw7ak"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tn5uc"]
+radius = 249.0
+height = 498.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ai2xf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hw7rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4kncq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a0mv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jo22f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_awsx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w0jyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y1onb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_12ygn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jkmyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_630f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wo6tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hw3pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_utigx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5i3eh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wmyk"]
-size = Vector2(43539, 50)
+size = Vector2(999999, 50)
 
 [node name="Mundo 1" type="Node2D"]
 position = Vector2(0, -52)
@@ -129,6 +199,25 @@ position = Vector2(16283, 865)
 [node name="Enemy" parent="." instance=ExtResource("2_ta8o6")]
 position = Vector2(2455, -775)
 
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_q06ed")]
+position = Vector2(-293, -590)
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(4372.79, -477.312)
+script = ExtResource("3_nlmsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(-456.795, -161.688)
+shape = SubResource("CapsuleShape2D_tn5uc")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+position = Vector2(-314.79, -97.688)
+sprite_frames = SubResource("SpriteFrames_ai2xf")
+frame_progress = 0.449107
+
 [node name="Sarcofago2" parent="." instance=ExtResource("18_cuvnp")]
 position = Vector2(12680, 775)
 scale = Vector2(0.5, 0.5)
@@ -146,9 +235,12 @@ texture = ExtResource("18_ra0d1")
 [node name="DeathZone" type="Area2D" parent="."]
 position = Vector2(7344, 3088)
 script = ExtResource("20_mw7ak")
+character = NodePath("../CharacterBody2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 position = Vector2(3208.5, 15)
 shape = SubResource("RectangleShape2D_6wmyk")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
+
+[editable path="CharacterBody2D"]
