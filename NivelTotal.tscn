@@ -411,7 +411,7 @@ position = Vector2(11258, 213)
 
 [node name="Quini" type="StaticBody2D" parent="."]
 z_index = 5
-position = Vector2(2040, 238)
+position = Vector2(47266, 2984)
 script = ExtResource("5_p0fif")
 
 [node name="TextureRect" type="TextureRect" parent="Quini"]
