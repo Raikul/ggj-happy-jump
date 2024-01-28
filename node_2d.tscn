@@ -112,7 +112,7 @@ position = Vector2(19164, 917)
 position = Vector2(20028, 917)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_eidd4")]
-position = Vector2(-420, -564)
+position = Vector2(14582, -647)
 
 [node name="Camera2D" parent="CharacterBody2D" index="2"]
 zoom = Vector2(0.65, 0.65)
@@ -120,5 +120,11 @@ zoom = Vector2(0.65, 0.65)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8945, 553)
 shape = SubResource("RectangleShape2D_1fqwy")
+
+[node name="RigidBody2D32" parent="." instance=ExtResource("1_svr6v")]
+position = Vector2(19380, 104)
+
+[node name="RigidBody2D33" parent="." instance=ExtResource("1_svr6v")]
+position = Vector2(20581, 386)
 
 [editable path="CharacterBody2D"]
